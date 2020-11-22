@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'clockwindow.h'
+** Meta object code from reading C++ file 'settingwindow.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.8)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../ITU_clock/clockwindow.h"
+#include "../ITU_clock/settingwindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'clockwindow.h' doesn't include <QObject>."
+#error "The header file 'settingwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.12.8. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,25 +20,25 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_ClockWindow_t {
+struct qt_meta_stringdata_SettingWindow_t {
     QByteArrayData data[1];
-    char stringdata0[12];
+    char stringdata0[14];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_ClockWindow_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_SettingWindow_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_ClockWindow_t qt_meta_stringdata_ClockWindow = {
+static const qt_meta_stringdata_SettingWindow_t qt_meta_stringdata_SettingWindow = {
     {
-QT_MOC_LITERAL(0, 0, 11) // "ClockWindow"
+QT_MOC_LITERAL(0, 0, 13) // "SettingWindow"
 
     },
-    "ClockWindow"
+    "SettingWindow"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_ClockWindow[] = {
+static const uint qt_meta_data_SettingWindow[] = {
 
  // content:
        8,       // revision
@@ -54,7 +54,7 @@ static const uint qt_meta_data_ClockWindow[] = {
        0        // eod
 };
 
-void ClockWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void SettingWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -62,30 +62,30 @@ void ClockWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject ClockWindow::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject SettingWindow::staticMetaObject = { {
     &QMainWindow::staticMetaObject,
-    qt_meta_stringdata_ClockWindow.data,
-    qt_meta_data_ClockWindow,
+    qt_meta_stringdata_SettingWindow.data,
+    qt_meta_data_SettingWindow,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *ClockWindow::metaObject() const
+const QMetaObject *SettingWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *ClockWindow::qt_metacast(const char *_clname)
+void *SettingWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_ClockWindow.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_SettingWindow.stringdata0))
         return static_cast<void*>(this);
     return QMainWindow::qt_metacast(_clname);
 }
 
-int ClockWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int SettingWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     return _id;

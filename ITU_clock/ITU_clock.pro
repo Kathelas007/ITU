@@ -17,13 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    clockwindow.cpp
+    clockwindow.cpp \
+    settingwindow.cpp
 
 HEADERS += \
-    clockwindow.h
+    clockwindow.h \
+    settingwindow.h
 
 FORMS += \
-    clockwindow.ui
+    clockwindow.ui \
+    settingwindow.ui
 
 TRANSLATIONS += \
     ITU_clock_cs_CZ.ts
