@@ -48,4 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Qt files that should not be shared
 build-qt_clock-Desktop-Debug
+*.user
