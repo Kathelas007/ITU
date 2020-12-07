@@ -15,6 +15,9 @@ public:
     ClockWindow(QWidget *parent = nullptr);
     ~ClockWindow();
 
+private slots:
+    void on_toolButton_clicked();
+
 private:
     Ui::ClockWindow *ui;
 };
