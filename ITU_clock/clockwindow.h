@@ -14,5 +14,10 @@ public:
 private slots:
 
 private:
+    void setup_layout();
+    void display_close_button();
+    void display_minimize_button();
+
+    void display_clock();
 };
 #endif // CLOCKWINDOW_H
