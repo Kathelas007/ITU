@@ -19,7 +19,10 @@ class SettingWindow : public QMainWindow
    public slots:
        void changePage(bool);
 
-   private:
+private slots:
+       void on_color_bg_button_clicked();
+
+private:
        Ui::SettingWindow *ui;
        QPushButton* activeButton;
        QMap<QPushButton *, QWidget *> button_to_pages;

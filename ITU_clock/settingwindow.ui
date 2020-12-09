@@ -196,7 +196,7 @@ QPushButton:checked{
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QWidget" name="page_1" native="true">
+      <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <widget class="QFrame" name="frame_2">
@@ -310,12 +310,18 @@ QPushButton:checked{
                   <property name="text">
                    <string>Hours</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QCheckBox" name="checkBox_2">
                   <property name="text">
                    <string>Minutes</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -383,7 +389,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton">
+                 <widget class="QPushButton" name="color_bg_button">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>

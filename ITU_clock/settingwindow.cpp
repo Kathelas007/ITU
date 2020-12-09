@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <cstdio>
 
+#include <QColor>
+ #include <QColorDialog>
+
 
 SettingWindow::SettingWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -45,4 +48,9 @@ void SettingWindow::changePage(bool active){
     this->activeButton = button;
 
     ui->stackedWidget->setCurrentWidget(button_to_pages[button]);
+}
+
+void SettingWindow::on_color_bg_button_clicked()
+{
+
 }
