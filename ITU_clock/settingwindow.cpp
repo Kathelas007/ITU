@@ -18,6 +18,7 @@ SettingWindow::SettingWindow(QWidget *parent) :
     ui->setupUi(this);
     generalModel = GeneralModel::getInstance();
 
+    setMappers();
     setPages();
     loadSetting();
 }
@@ -27,6 +28,28 @@ SettingWindow::~SettingWindow()
     delete ui;
 }
 
+void SettingWindow::setMappers(){
+
+//    General
+    comboBoxMapper[ui->mode_cb] = &generalModel->mode;
+    comboBoxMapper[ui->design_cb] = &generalModel->design;
+    sliderMapper[ui->opacity_slider] = &generalModel->opacity;
+
+    checkBoxMapper[ui->hours_chb] = &generalModel->hours;
+    checkBoxMapper[ui->minutes_chb] = &generalModel->minutes;
+    checkBoxMapper[ui->seconds_chb] = &generalModel->seconds;
+    checkBoxMapper[ui->own_chb] = &generalModel->own;
+
+
+    colorPushButtonMapper[ui->h_color_b] = &generalModel->h_color;
+    colorPushButtonMapper[ui->m_color_b] = &generalModel->m_color;
+    colorPushButtonMapper[ui->s_color_b] = &generalModel->s_color;
+    colorPushButtonMapper[ui->b_color_b] = &generalModel->b_color;
+
+//    Digital
+
+
+}
 void SettingWindow::setPages(){
 
 //  ui->deliminer_line_edit->setAlignment(Qt::AlignVCenter);
@@ -47,7 +70,36 @@ void SettingWindow::setPages(){
 }
 
 void SettingWindow::loadSetting(){
-    ui->mode_combo->setCurrentIndex(generalModel->mode);
+    QMapIterator<QComboBox*,int *> cb(comboBoxMapper);
+    while (cb.hasNext()) {
+        cb.next();
+        cb.key()->setCurrentIndex(*cb.value());
+    }
+
+    QMapIterator<QSlider*,int *> sl(sliderMapper);
+    while (sl.hasNext()) {
+        sl.next();
+        sl.key()->setValue(*sl.value());
+    }
+
+    QMapIterator<QCheckBox*,bool *> chb(checkBoxMapper);
+    while (chb.hasNext()) {
+        chb.next();
+        chb.key()->setChecked(*chb.value());
+    }
+
+    QMapIterator<QPushButton*,QColor*> pb(colorPushButtonMapper);
+    while (pb.hasNext()) {
+        pb.next();
+        pb.key()->setText(pb.value()->name());
+    }
+
+    QMapIterator<QLineEdit*,QString*> le(lineEditMapper);
+    while (le.hasNext()) {
+        le.next();
+        le.key()->setText(*le.value());
+    }
+
 }
 
 void SettingWindow::changePage(bool active){

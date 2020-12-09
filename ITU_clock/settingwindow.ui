@@ -196,6 +196,9 @@ QPushButton:checked{
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
@@ -227,7 +230,7 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="mode_combo">
+               <widget class="QComboBox" name="mode_cb">
                 <property name="minimumSize">
                  <size>
                   <width>120</width>
@@ -276,6 +279,9 @@ QPushButton:checked{
               </item>
               <item>
                <widget class="QSlider" name="opacity_slider">
+                <property name="value">
+                 <number>50</number>
+                </property>
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -435,7 +441,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="color_b_b">
+                 <widget class="QPushButton" name="b_color_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -465,7 +471,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="color_h_b">
+                 <widget class="QPushButton" name="h_color_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -495,7 +501,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="color_m_b">
+                 <widget class="QPushButton" name="m_color_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -525,7 +531,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="color_s_b">
+                 <widget class="QPushButton" name="s_color_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>

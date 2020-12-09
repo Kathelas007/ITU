@@ -4,6 +4,11 @@
 #include <QMainWindow>
 #include <QMap>
 #include <QPushButton>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QLineEdit>
+#include <QSlider>
+#include <QMap>
 
 #include "generalmodel.h"
 
@@ -16,6 +21,13 @@ class SettingWindow : public QMainWindow
     GeneralModel * generalModel;
     void loadSetting();
     void setPages();
+    void setMappers();
+
+    QMap<QComboBox*, int*> comboBoxMapper;
+    QMap<QPushButton*, QColor*> colorPushButtonMapper;
+    QMap<QCheckBox*, bool *> checkBoxMapper;
+    QMap<QLineEdit*, QString*> lineEditMapper;
+    QMap<QSlider*, int*> sliderMapper;
 
     Q_OBJECT
 public:
