@@ -5,19 +5,25 @@
 #include <QMap>
 #include <QPushButton>
 
+#include "generalmodel.h"
+
 namespace Ui {
 class SettingWindow;
 }
 
 class SettingWindow : public QMainWindow
 {
-    Q_OBJECT
-   public:
-       explicit SettingWindow(QWidget *parent = nullptr);
-        ~SettingWindow();
+    GeneralModel * generalModel;
+    void loadSetting();
+    void setPages();
 
-   public slots:
-       void changePage(bool);
+    Q_OBJECT
+public:
+   explicit SettingWindow(QWidget *parent = nullptr);
+    ~SettingWindow();
+
+public slots:
+   void changePage(bool);
 
 private slots:
        void on_color_bg_button_clicked();

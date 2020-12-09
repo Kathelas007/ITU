@@ -1,23 +1,33 @@
-#include "clockwindow.h"
-#include "ui_clockwindow.h"
 
-//#include "settingwindow.h"
+#include <QtWidgets>
+
+#include "clockwindow.h"
 
 ClockWindow::ClockWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::ClockWindow)
+    : QMainWindow(parent, Qt::FramelessWindowHint)
 {
-    ui->setupUi(this);
+    this->setup_layout();
+    this->display_close_button();
+    this->display_minimize_button();
+
+    //select clock according to settings
+    //TODO work with settings
+    this->display_clock();
 }
 
-ClockWindow::~ClockWindow()
-{
-    delete ui;
+void ClockWindow::setup_layout(){
+
+
 }
 
+void ClockWindow::display_close_button(){
 
-void ClockWindow::on_toolButton_clicked()
-{
-//    SettingWindow *setting= new SettingWindow();
-//    setting->show();
+}
+
+void ClockWindow::display_minimize_button(){
+
+}
+
+void ClockWindow::display_clock(){
+
 }

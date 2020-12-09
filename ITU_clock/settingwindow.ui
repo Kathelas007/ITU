@@ -206,7 +206,7 @@ QPushButton:checked{
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_9">
+          <layout class="QVBoxLayout" name="verticalLayout_11">
            <item>
             <widget class="QFrame" name="mode_frame">
              <property name="styleSheet">
@@ -227,7 +227,7 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox">
+               <widget class="QComboBox" name="mode_combo">
                 <property name="minimumSize">
                  <size>
                   <width>120</width>
@@ -275,7 +275,7 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QSlider" name="horizontalSlider">
+               <widget class="QSlider" name="opacity_slider">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -306,7 +306,7 @@ QPushButton:checked{
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_9">
                 <item>
-                 <widget class="QCheckBox" name="checkBox_3">
+                 <widget class="QCheckBox" name="hours_chb">
                   <property name="text">
                    <string>Hours</string>
                   </property>
@@ -316,7 +316,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QCheckBox" name="checkBox_2">
+                 <widget class="QCheckBox" name="minutes_chb">
                   <property name="text">
                    <string>Minutes</string>
                   </property>
@@ -326,10 +326,56 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QCheckBox" name="checkBox_4">
+                 <widget class="QCheckBox" name="seconds_chb">
                   <property name="text">
                    <string>Seconds</string>
                   </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="color_frame_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QLabel" name="label_11">
+                  <property name="text">
+                   <string>Default design</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="design_cb">
+                  <property name="maximumSize">
+                   <size>
+                    <width>120</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Ubuntu</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Light</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -359,7 +405,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QCheckBox" name="checkBox">
+                 <widget class="QCheckBox" name="own_chb">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -389,7 +435,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="color_bg_button">
+                 <widget class="QPushButton" name="color_b_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -419,7 +465,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_4">
+                 <widget class="QPushButton" name="color_h_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -449,7 +495,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_5">
+                 <widget class="QPushButton" name="color_m_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -479,7 +525,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_6">
+                 <widget class="QPushButton" name="color_s_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>

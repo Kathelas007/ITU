@@ -2,10 +2,7 @@
 #define CLOCKWINDOW_H
 
 #include <QMainWindow>
-
-QT_BEGIN_NAMESPACE
-namespace Ui { class ClockWindow; }
-QT_END_NAMESPACE
+#include <QWidget>
 
 class ClockWindow : public QMainWindow
 {
@@ -13,12 +10,14 @@ class ClockWindow : public QMainWindow
 
 public:
     ClockWindow(QWidget *parent = nullptr);
-    ~ClockWindow();
 
 private slots:
-    void on_toolButton_clicked();
 
 private:
-    Ui::ClockWindow *ui;
+    void setup_layout();
+    void display_close_button();
+    void display_minimize_button();
+
+    void display_clock();
 };
 #endif // CLOCKWINDOW_H
