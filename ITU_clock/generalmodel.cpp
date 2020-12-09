@@ -7,7 +7,7 @@ GeneralModel * GeneralModel::instance;
 
 GeneralModel::GeneralModel() : SettingModel()
 {
-    group = "general";
+    group = "General";
     loadSetting();
 }
 

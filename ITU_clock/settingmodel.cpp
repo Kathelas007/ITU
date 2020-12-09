@@ -17,14 +17,14 @@ SettingModel::SettingModel()
 
 void SettingModel::defaultSetting(){
     QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
-    settings.beginGroup("general");
-    settings.setValue("mode", 0);
+    settings.beginGroup("General");
+    settings.setValue("mode", 1);
     settings.setValue("opacity", true);
     settings.setValue("hours", true);
     settings.setValue("minutes", true);
     settings.setValue("seconds",false);
-    settings.setValue("design",0);
-    settings.setValue("own", false);
+    settings.setValue("design",1);
+    settings.setValue("own", true);
     settings.setValue("h_color", QColor(Qt::black));
     settings.setValue("m_color", QColor(Qt::black));
     settings.setValue("s_color", QColor(Qt::black));
