@@ -21,7 +21,7 @@ public:
     void defaultSetting();
 
 signals:
-
+    void settingChanged();
 };
 
 #endif // SETTINGMODEL_H

@@ -41,6 +41,11 @@ public slots:
    void changePage(bool);
 
 private slots:
+   void comboBoxChanged(int);
+   void colorPushButtonClicked(bool);
+   void checkBoxChanged(int);
+   void lineEditChanged(QString);
+   void sliderChanged(int);
 
 private:
        Ui::SettingWindow *ui;

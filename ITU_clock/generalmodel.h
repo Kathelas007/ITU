@@ -4,21 +4,22 @@
 #include "settingmodel.h"
 
 #include <QColor>
+#include <QObject>
 
-
-class GeneralModel : SettingModel
+class GeneralModel : public SettingModel
 {
+    Q_OBJECT
     GeneralModel();
 
     static GeneralModel* instance;
     void loadSetting();
+
 public:
     void saveSetting();
 
     static GeneralModel * getInstance();
 
     // todo add window size
-
     int mode;
     int opacity;
 
@@ -33,6 +34,7 @@ public:
     QColor m_color;
     QColor s_color;
     QColor b_color;
+
 
 };
 

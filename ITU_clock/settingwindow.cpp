@@ -7,6 +7,7 @@
 
 #include <QColor>
 #include <QColorDialog>
+#include <QDebug>
 
 #include "generalmodel.h"
 
@@ -16,8 +17,8 @@ SettingWindow::SettingWindow(QWidget *parent) :
     ui(new Ui::SettingWindow)
 {
     ui->setupUi(this);
-    generalModel = GeneralModel::getInstance();
     digitalModel = DigitalModel::getInstance();
+    generalModel = GeneralModel::getInstance();
 
     setMappers();
     setPages();
@@ -72,35 +73,69 @@ void SettingWindow::setPages(){
     }
 }
 
+void SettingWindow::comboBoxChanged(int index){
+     QComboBox* cb = qobject_cast<QComboBox*>(sender());
+     *comboBoxMapper[cb] = index;
+     generalModel->settingChanged();
+}
+
+void SettingWindow::colorPushButtonClicked(bool clicked){
+    //TODO QColorWindow
+}
+
+void SettingWindow::checkBoxChanged(int state){
+    QCheckBox* cb = qobject_cast<QCheckBox*>(sender());
+    *checkBoxMapper[cb] = bool(state);
+    generalModel->settingChanged();
+
+}
+void SettingWindow::lineEditChanged(QString text){
+    QLineEdit* cb = qobject_cast<QLineEdit*>(sender());
+    *lineEditMapper[cb] = text;
+    generalModel->settingChanged();
+
+}
+void SettingWindow::sliderChanged(int value){
+    QSlider* cb = qobject_cast<QSlider*>(sender());
+    *sliderMapper[cb] = value;
+    generalModel->settingChanged();
+}
+
+
 void SettingWindow::loadSetting(){
     QMapIterator<QComboBox*,int *> cb(comboBoxMapper);
     while (cb.hasNext()) {
         cb.next();
         cb.key()->setCurrentIndex(*cb.value());
+        connect(cb.key(), SIGNAL(currentIndexChanged(int)), this, SLOT(comboBoxChanged(int)));
     }
 
     QMapIterator<QSlider*,int *> sl(sliderMapper);
     while (sl.hasNext()) {
         sl.next();
         sl.key()->setValue(*sl.value());
+        connect(sl.key(), SIGNAL(valueChanged(int)), this, SLOT(sliderChanged(int)));
     }
 
     QMapIterator<QCheckBox*,bool *> chb(checkBoxMapper);
     while (chb.hasNext()) {
         chb.next();
         chb.key()->setChecked(*chb.value());
+        connect(chb.key(), SIGNAL(stateChanged(int)), this, SLOT(sliderChanged(int)));
     }
 
     QMapIterator<QPushButton*,QColor*> pb(colorPushButtonMapper);
     while (pb.hasNext()) {
         pb.next();
         pb.key()->setText(pb.value()->name());
+        connect(pb.key(), SIGNAL(clicked(bool)), this, SLOT(colorPushButtonClicked(bool)));
     }
 
     QMapIterator<QLineEdit*,QString*> le(lineEditMapper);
     while (le.hasNext()) {
         le.next();
         le.key()->setText(*le.value());
+        connect(le.key(), SIGNAL(textChanged(QString)), this, SLOT(lineEditChanged(QString))); // maybe edited
     }
 
 }
