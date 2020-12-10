@@ -34,3 +34,20 @@ void GeneralModel::loadSetting(){
     b_color = settings.value("b_color").value<QColor>();
     settings.endGroup();
 }
+
+void GeneralModel::saveSetting(){
+    QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
+    settings.beginGroup(group);
+    settings.setValue("mode", mode );
+    settings.setValue("opacity", opacity);
+    settings.setValue("hours", hours);
+    settings.setValue("minutes", minutes);
+    settings.setValue("seconds", seconds);
+    settings.setValue("design", design);
+    settings.setValue("own", own);
+    settings.setValue("h_color", h_color);
+    settings.setValue("m_color", m_color);
+    settings.setValue("s_color", s_color);
+    settings.setValue("b_color", b_color);
+    settings.endGroup();
+}

@@ -11,6 +11,7 @@
 #include <QMap>
 
 #include "generalmodel.h"
+#include "digitalmodel.h"
 
 namespace Ui {
 class SettingWindow;
@@ -19,6 +20,8 @@ class SettingWindow;
 class SettingWindow : public QMainWindow
 {
     GeneralModel * generalModel;
+    DigitalModel* digitalModel;
+
     void loadSetting();
     void setPages();
     void setMappers();
@@ -38,7 +41,6 @@ public slots:
    void changePage(bool);
 
 private slots:
-       void on_color_bg_button_clicked();
 
 private:
        Ui::SettingWindow *ui;

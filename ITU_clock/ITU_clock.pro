@@ -16,7 +16,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     analogclock.cpp \
+    analogmodel.cpp \
     digitalclock.cpp \
+    digitalmodel.cpp \
     generalmodel.cpp \
     main.cpp \
     clockwindow.cpp \
@@ -25,8 +27,10 @@ SOURCES += \
 
 HEADERS += \
     analogclock.h \
+    analogmodel.h \
     clockwindow.h \
     digitalclock.h \
+    digitalmodel.h \
     generalmodel.h \
     settingmodel.h \
     settingwindow.h

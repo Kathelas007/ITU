@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>500</height>
+    <height>569</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>800</width>
-    <height>500</height>
+    <height>550</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>800</width>
-    <height>500</height>
+    <height>569</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -210,6 +210,9 @@ QPushButton:checked{
            <enum>QFrame::Raised</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
+           <property name="spacing">
+            <number>20</number>
+           </property>
            <item>
             <widget class="QFrame" name="mode_frame">
              <property name="styleSheet">
@@ -606,7 +609,7 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_2">
+               <widget class="QComboBox" name="format_cb">
                 <property name="minimumSize">
                  <size>
                   <width>120</width>
@@ -654,7 +657,7 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit">
+               <widget class="QLineEdit" name="deliminer_le">
                 <property name="minimumSize">
                  <size>
                   <width>120</width>
@@ -704,6 +707,9 @@ QPushButton:checked{
            <enum>QFrame::Raised</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_8">
+           <property name="spacing">
+            <number>20</number>
+           </property>
            <item>
             <widget class="QFrame" name="mode_frame_3">
              <property name="styleSheet">

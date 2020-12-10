@@ -13,6 +13,7 @@ SettingModel::SettingModel()
     QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
     if(settings.allKeys().length() == 0)
         defaultSetting();
+
 }
 
 void SettingModel::defaultSetting(){
@@ -29,6 +30,11 @@ void SettingModel::defaultSetting(){
     settings.setValue("m_color", QColor(Qt::black));
     settings.setValue("s_color", QColor(Qt::black));
     settings.setValue("b_color", QColor(Qt::white));
+    settings.endGroup();
+
+    settings.beginGroup("Digital");
+    settings.setValue("format", 1);
+    settings.setValue("deliminer", "*");
     settings.endGroup();
 }
 

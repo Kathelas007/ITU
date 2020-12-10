@@ -9,13 +9,15 @@
 class GeneralModel : SettingModel
 {
     GeneralModel();
-    ~GeneralModel(){};
 
     static GeneralModel* instance;
     void loadSetting();
-    void saveSetting(QString key,QString value);
 public:
+    void saveSetting();
+
     static GeneralModel * getInstance();
+
+    // todo add window size
 
     int mode;
     int opacity;

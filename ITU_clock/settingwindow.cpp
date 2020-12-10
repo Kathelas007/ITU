@@ -17,6 +17,7 @@ SettingWindow::SettingWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     generalModel = GeneralModel::getInstance();
+    digitalModel = DigitalModel::getInstance();
 
     setMappers();
     setPages();
@@ -26,6 +27,7 @@ SettingWindow::SettingWindow(QWidget *parent) :
 SettingWindow::~SettingWindow()
 {
     delete ui;
+    generalModel->saveSetting();
 }
 
 void SettingWindow::setMappers(){
@@ -47,12 +49,13 @@ void SettingWindow::setMappers(){
     colorPushButtonMapper[ui->b_color_b] = &generalModel->b_color;
 
 //    Digital
+    comboBoxMapper[ui->format_cb] = &digitalModel->format;
+    lineEditMapper[ui->deliminer_le] = &digitalModel->deliminer;
 
+//
 
 }
 void SettingWindow::setPages(){
-
-//  ui->deliminer_line_edit->setAlignment(Qt::AlignVCenter);
 
     ui->pushButton_1->setChecked(true);
     this->activeButton = ui->pushButton_1;
@@ -113,9 +116,4 @@ void SettingWindow::changePage(bool active){
     this->activeButton = button;
 
     ui->stackedWidget->setCurrentWidget(button_to_pages[button]);
-}
-
-void SettingWindow::on_color_bg_button_clicked()
-{
-
 }
