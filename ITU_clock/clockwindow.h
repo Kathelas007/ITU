@@ -8,6 +8,7 @@
 #include <QHBoxLayout>
 
 #include "generalmodel.h"
+#include "settingwindow.h"
 
 class ClockWindow : public QMainWindow
 {
@@ -17,7 +18,8 @@ public:
     ClockWindow(QWidget *parent = nullptr);
 
 private slots:
-    void hideClock();
+    void hideShowClock();
+    void showSettings();
 
 private:
     QGridLayout* windowLayout;

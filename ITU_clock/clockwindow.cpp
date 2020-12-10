@@ -28,7 +28,8 @@ ClockWindow::ClockWindow(QWidget *parent)
 
     //signals and slots
     connect(this->closeButton, SIGNAL(clicked()), qApp, SLOT(quit()));
-    connect(this->minimButton, SIGNAL(clicked()), this, SLOT(hideClock()));
+    connect(this->minimButton, SIGNAL(clicked()), this, SLOT(hideShowClock()));
+    connect(this->settingsButton, SIGNAL(clicked()), this, SLOT(showSettings()));
 }
 
 void ClockWindow::mousePressEvent(QMouseEvent *event) {
@@ -80,7 +81,7 @@ QToolButton* ClockWindow::display_settings_button(QGridLayout *layout){
 void ClockWindow::setup_window(QWidget* widget){
 
     GeneralModel *model = GeneralModel::getInstance();
-    widget->setStyleSheet("background-color: rgba(255,255,255,"+ QString::number(model->opacity) +");");
+    widget->setStyleSheet("background-color: rgba(153,151,150,"+ QString::number(model->opacity) +");");
 }
 
 void ClockWindow::display_clock(QGridLayout* layout){
@@ -88,7 +89,7 @@ void ClockWindow::display_clock(QGridLayout* layout){
 }
 
 /***********************SLOTS***********************/
-void ClockWindow::hideClock(){
+void ClockWindow::hideShowClock(){
 
     if (this->collapsed){
         //zobraz hodiny
@@ -103,4 +104,10 @@ void ClockWindow::hideClock(){
       resize(this->collapsedW, this->collapsedH);
       this->collapsed = true;
     }
+}
+
+void ClockWindow::showSettings(){
+    //uprav tak, aby se nedala vyklikat hromada oken
+    SettingWindow *settings = new SettingWindow();
+    settings->show();
 }
