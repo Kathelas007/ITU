@@ -1,5 +1,9 @@
 #include "digitalmodel.h"
+#include "generalmodel.h"
 
+#include <iostream>
+
+#include <QDebug>
 
 DigitalModel * DigitalModel::instance;
 
@@ -8,7 +12,6 @@ DigitalModel::DigitalModel() : SettingModel()
 {
     group = "Digital";
     loadSetting();
-
 }
 
 DigitalModel* DigitalModel::getInstance(){

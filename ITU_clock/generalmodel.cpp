@@ -1,5 +1,6 @@
 #include "generalmodel.h"
 
+#include <QDebug>
 #include <QSettings>
 
 GeneralModel * GeneralModel::instance;
@@ -38,7 +39,7 @@ void GeneralModel::loadSetting(){
 void GeneralModel::saveSetting(){
     QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
     settings.beginGroup(group);
-    settings.setValue("mode", mode );
+    settings.setValue("mode", mode);
     settings.setValue("opacity", opacity);
     settings.setValue("hours", hours);
     settings.setValue("minutes", minutes);

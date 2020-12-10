@@ -1,11 +1,10 @@
 #ifndef DIGITALMODEL_H
 #define DIGITALMODEL_H
 
-#include <QObject>
 #include "settingmodel.h"
+#include <QObject>
 
-
-class DigitalModel :SettingModel
+class DigitalModel : public SettingModel
 {
      Q_OBJECT
 
@@ -21,6 +20,8 @@ public:
 
     int format;
     QString deliminer;
+
+
 };
 
 #endif // DIGITALMODEL_H
