@@ -1,18 +1,13 @@
 #include "settingmodel.h"
 
-#include <QDir>
-#include <QColor>
-#include <iostream>
-#include <QSettings>
-
-SettingModel::SettingModel()
+SettingModel::SettingModel(QObject *parent) : QObject(parent)
 {
     company = "StackUndeflow";
-    product = "ITU_Clock";
+        product = "ITU_Clock";
 
-    QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
-    if(settings.allKeys().length() == 0)
-        defaultSetting();
+        QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
+        if(settings.allKeys().length() == 0)
+            defaultSetting();
 
 }
 

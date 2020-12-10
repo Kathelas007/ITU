@@ -7,16 +7,21 @@
 
 #include <QString>
 
-class SettingModel
+class SettingModel : public QObject
 {
+    Q_OBJECT
+
 protected:
     QString group;
     QString company;
     QString product;
 
 public:
-    SettingModel();
+    explicit SettingModel(QObject *parent = nullptr);
     void defaultSetting();
+
+signals:
+
 };
 
 #endif // SETTINGMODEL_H
