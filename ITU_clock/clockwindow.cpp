@@ -24,6 +24,7 @@ ClockWindow::ClockWindow(QWidget *parent)
     this->setup_window(widget);
     this->display_clock(this->windowLayout);
 
+
     setCentralWidget(widget);
 
     //signals and slots
@@ -85,7 +86,14 @@ void ClockWindow::setup_window(QWidget* widget){
 }
 
 void ClockWindow::display_clock(QGridLayout* layout){
-    //actually display clock
+
+    GeneralModel *model = GeneralModel::getInstance();
+    if(model->mode == 1 ){
+        //zobraz digitalni hodiny
+    }
+    else {
+        //zobraz analogovy hodiny
+    }
 }
 
 /***********************SLOTS***********************/
