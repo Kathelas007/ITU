@@ -53,7 +53,7 @@ void ClockWindow::setup_window(QWidget* widget){
 
     //add rest
     GeneralModel *model = GeneralModel::getInstance();
-    widget->setStyleSheet("background-color: rgba(255,255,255,128);");
+    widget->setStyleSheet("background-color: rgba(255,255,255,0);");
 }
 
 void ClockWindow::display_clock(QGridLayout* layout){
