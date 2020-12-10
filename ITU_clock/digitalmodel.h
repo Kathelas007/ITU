@@ -5,12 +5,12 @@
 #include "settingmodel.h"
 
 
-class DigitalModel : public QObject, SettingModel
+class DigitalModel :SettingModel
 {
      Q_OBJECT
 
 private:
-    explicit DigitalModel(QObject *parent = nullptr);
+    DigitalModel();
     static DigitalModel* instance;
     void loadSetting();
 
