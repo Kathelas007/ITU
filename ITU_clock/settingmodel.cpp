@@ -31,5 +31,11 @@ void SettingModel::defaultSetting(){
     settings.setValue("format", 1);
     settings.setValue("deliminer", "*");
     settings.endGroup();
+
+    settings.beginGroup("Analog");
+    settings.setValue("dial_mode", 1);
+    settings.setValue("dial_description", 1);
+    settings.setValue("dial_color", QColor(Qt::red));
+    settings.endGroup();
 }
 

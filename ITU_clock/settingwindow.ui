@@ -197,7 +197,7 @@ QPushButton:checked{
        <enum>QFrame::Raised</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -733,7 +733,7 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_3">
+               <widget class="QComboBox" name="dial_mode_cb">
                 <property name="minimumSize">
                  <size>
                   <width>120</width>
@@ -786,7 +786,7 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_4">
+               <widget class="QComboBox" name="dial_desc_cb">
                 <property name="minimumSize">
                  <size>
                   <width>120</width>
@@ -839,34 +839,22 @@ QPushButton:checked{
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_5">
+               <widget class="QPushButton" name="dial_color_p">
                 <property name="minimumSize">
                  <size>
-                  <width>120</width>
+                  <width>100</width>
                   <height>0</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>120</width>
+                  <width>100</width>
                   <height>16777215</height>
                  </size>
                 </property>
-                <item>
-                 <property name="text">
-                  <string>Latin Numbers</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Rome Numbers</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>None</string>
-                 </property>
-                </item>
+                <property name="text">
+                 <string>#fff</string>
+                </property>
                </widget>
               </item>
              </layout>
