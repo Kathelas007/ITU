@@ -9,11 +9,11 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ClockWindow w;
-    w.show();
+//    ClockWindow w;
+//    w.show();
 
-//    SettingWindow s;
-//    s.show();
+    SettingWindow s;
+    s.show();
 
     return a.exec();
 }

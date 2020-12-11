@@ -9,10 +9,12 @@
 #include <QLineEdit>
 #include <QSlider>
 #include <QMap>
+#include <QPair>
 
 #include "generalmodel.h"
 #include "digitalmodel.h"
 #include "analogmodel.h"
+#include "settingmodel.h"
 
 namespace Ui {
 class SettingWindow;
@@ -28,11 +30,11 @@ class SettingWindow : public QMainWindow
     void setPages();
     void setMappers();
 
-    QMap<QComboBox*, int*> comboBoxMapper;
-    QMap<QPushButton*, QColor*> colorPushButtonMapper;
-    QMap<QCheckBox*, bool *> checkBoxMapper;
-    QMap<QLineEdit*, QString*> lineEditMapper;
-    QMap<QSlider*, int*> sliderMapper;
+    QMap<QComboBox*, QPair<SettingModel*, int*>> comboBoxMapper;
+    QMap<QPushButton*, QPair<SettingModel*,QColor*>> colorPushButtonMapper;
+    QMap<QCheckBox*, QPair<SettingModel*,bool *>> checkBoxMapper;
+    QMap<QLineEdit*, QPair<SettingModel*,QString*>> lineEditMapper;
+    QMap<QSlider*, QPair<SettingModel*,int*>> sliderMapper;
 
     Q_OBJECT
 public:

@@ -8,7 +8,6 @@ SettingModel::SettingModel(QObject *parent) : QObject(parent)
         QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
         if(settings.allKeys().length() == 0)
             defaultSetting();
-
 }
 
 void SettingModel::defaultSetting(){
