@@ -676,6 +676,12 @@ QPushButton:checked{
                 <property name="text">
                  <string>:</string>
                 </property>
+                <property name="maxLength">
+                 <number>3</number>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
                </widget>
               </item>
              </layout>

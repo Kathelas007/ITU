@@ -35,6 +35,8 @@ SettingWindow::~SettingWindow()
 {
     delete ui;
     generalModel->saveSetting();
+    digitalModel->saveSetting();
+    analogModel->saveSetting();
 }
 
 void SettingWindow::setMappers(){
@@ -48,7 +50,6 @@ void SettingWindow::setMappers(){
     checkBoxMapper[ui->minutes_chb] = qMakePair(generalModel,&generalModel->minutes);
     checkBoxMapper[ui->seconds_chb] = qMakePair(generalModel,&generalModel->seconds);
     checkBoxMapper[ui->own_chb] = qMakePair(generalModel,&generalModel->own);
-
 
     colorPushButtonMapper[ui->h_color_b] = qMakePair(generalModel,&generalModel->h_color);
     colorPushButtonMapper[ui->m_color_b] = qMakePair(generalModel,&generalModel->m_color);
@@ -108,7 +109,7 @@ void SettingWindow::checkBoxChanged(int state){
 void SettingWindow::lineEditChanged(QString text){
     QLineEdit* cb = qobject_cast<QLineEdit*>(sender());
     *lineEditMapper[cb].second = text;
-    generalModel->settingChanged();
+    lineEditMapper[cb].first->settingChanged();
 
 }
 void SettingWindow::sliderChanged(int value){

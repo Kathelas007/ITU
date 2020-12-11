@@ -17,7 +17,7 @@ void SettingModel::defaultSetting(){
     settings.setValue("opacity", true);
     settings.setValue("hours", true);
     settings.setValue("minutes", true);
-    settings.setValue("seconds",true);
+    settings.setValue("seconds",false);
     settings.setValue("design",1);
     settings.setValue("own", true);
     settings.setValue("h_color", QColor(Qt::black));
