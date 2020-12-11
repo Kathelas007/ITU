@@ -64,7 +64,6 @@ void SettingWindow::setMappers(){
     comboBoxMapper[ui->dial_mode_cb] = qMakePair(analogModel, &analogModel->dial_mode);
     comboBoxMapper[ui->dial_desc_cb] = qMakePair(analogModel, &analogModel->dial_mode);
     colorPushButtonMapper[ui->dial_color_p] = qMakePair(analogModel, &analogModel->dial_color);
-
 }
 void SettingWindow::setPages(){
 
@@ -118,6 +117,21 @@ void SettingWindow::sliderChanged(int value){
     sliderMapper[cb].first->settingChanged();
 }
 
+void SettingWindow::designDisabling(int arg1){
+    bool disable;
+    if(arg1 == 0)
+        disable = true;
+    else
+        disable = false;
+
+    ui->b_color_b->setDisabled(disable);
+    ui->h_color_b->setDisabled(disable);
+    ui->m_color_b->setDisabled(disable);
+    ui->s_color_b->setDisabled(disable);
+
+    ui->design_cb->setDisabled(!disable);
+}
+
 
 void SettingWindow::loadSetting(){
     QMapIterator<QComboBox*,QPair<SettingModel*, int *>> cb(comboBoxMapper);
@@ -138,7 +152,7 @@ void SettingWindow::loadSetting(){
     while (chb.hasNext()) {
         chb.next();
         chb.key()->setChecked(*chb.value().second);
-        connect(chb.key(), SIGNAL(stateChanged(int)), this, SLOT(sliderChanged(int)));
+        connect(chb.key(), SIGNAL(stateChanged(int)), this, SLOT(checkBoxChanged(int)));
     }
 
     QMapIterator<QPushButton*, QPair<SettingModel*, QColor*>> pb(colorPushButtonMapper);
@@ -154,6 +168,8 @@ void SettingWindow::loadSetting(){
         le.key()->setText(*le.value().second);
         connect(le.key(), SIGNAL(textChanged(QString)), this, SLOT(lineEditChanged(QString))); // maybe edited
     }
+
+    designDisabling(ui->own_chb->isChecked());
 }
 
 void SettingWindow::changePage(bool active){
@@ -167,4 +183,9 @@ void SettingWindow::changePage(bool active){
     this->activeButton = button;
 
     ui->stackedWidget->setCurrentWidget(button_to_pages[button]);
+}
+
+void SettingWindow::on_own_chb_stateChanged(int arg1)
+{
+    designDisabling(arg1);
 }
