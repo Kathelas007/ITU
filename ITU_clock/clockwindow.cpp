@@ -88,8 +88,9 @@ void ClockWindow::setup_window(QWidget* widget){
 void ClockWindow::display_clock(QGridLayout* layout){
 
     GeneralModel *model = GeneralModel::getInstance();
-    if(model->mode == 1 ){
-        //zobraz digitalni hodiny
+    if( model->mode == 1 ){
+       this->digital = new DigitalClock();
+       layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
     }
     else {
         //zobraz analogovy hodiny
@@ -99,15 +100,29 @@ void ClockWindow::display_clock(QGridLayout* layout){
 /***********************SLOTS***********************/
 void ClockWindow::hideShowClock(){
 
+    GeneralModel* model = GeneralModel::getInstance();
+
     if (this->collapsed){
-        //zobraz hodiny
+        if (model->mode == 1){
+            this->digital->show();
+        }
+        else{
+            //show analog clock
+        }
+
         this->settingsButton->show();
         resize(this->baseW, this->baseH);
         this->collapsed = false;
     }
 
     else{
-      //schovej hodiny
+        if(model->mode == 1){
+            this->digital->hide();
+        }
+        else{
+            //hide analog clock
+        }
+
       this->settingsButton->hide();
       resize(this->collapsedW, this->collapsedH);
       this->collapsed = true;

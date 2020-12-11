@@ -7,8 +7,12 @@
 #include <QGridLayout>
 #include <QHBoxLayout>
 
+#include "digitalclock.h"
+
 #include "generalmodel.h"
 #include "settingwindow.h"
+
+
 
 class ClockWindow : public QMainWindow
 {
@@ -22,6 +26,8 @@ private slots:
     void showSettings();
 
 private:
+    DigitalClock* digital;
+
     QGridLayout* windowLayout;
 
     QToolButton* closeButton;
