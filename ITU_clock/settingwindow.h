@@ -12,6 +12,7 @@
 
 #include "generalmodel.h"
 #include "digitalmodel.h"
+#include "analogmodel.h"
 
 namespace Ui {
 class SettingWindow;
@@ -21,6 +22,7 @@ class SettingWindow : public QMainWindow
 {
     GeneralModel * generalModel;
     DigitalModel* digitalModel;
+    AnalogModel * analogModel;
 
     void loadSetting();
     void setPages();
@@ -42,7 +44,7 @@ public slots:
 
 private slots:
    void comboBoxChanged(int);
-   void colorPushButtonClicked(bool);
+   void colorPushButtonClicked();
    void checkBoxChanged(int);
    void lineEditChanged(QString);
    void sliderChanged(int);

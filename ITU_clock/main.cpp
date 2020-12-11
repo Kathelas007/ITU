@@ -12,8 +12,8 @@ int main(int argc, char *argv[])
     ClockWindow w;
     w.show();
 
-    //SettingWindow s;
-    //s.show();
+//    SettingWindow s;
+//    s.show();
 
     return a.exec();
 }

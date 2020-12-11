@@ -8,8 +8,12 @@
 #include <QColor>
 #include <QColorDialog>
 #include <QDebug>
+#include<QFontDialog>
+#include<QColorDialog>
 
 #include "generalmodel.h"
+#include "digitalmodel.h"
+#include "analogmodel.h"
 
 
 SettingWindow::SettingWindow(QWidget *parent) :
@@ -17,8 +21,10 @@ SettingWindow::SettingWindow(QWidget *parent) :
     ui(new Ui::SettingWindow)
 {
     ui->setupUi(this);
+
     digitalModel = DigitalModel::getInstance();
     generalModel = GeneralModel::getInstance();
+    analogModel = AnalogModel::getInstance();
 
     setMappers();
     setPages();
@@ -54,7 +60,9 @@ void SettingWindow::setMappers(){
     lineEditMapper[ui->deliminer_le] = &digitalModel->deliminer;
 
 //    Analog
-    // TODO
+    comboBoxMapper[ui->dial_mode_cb] = &analogModel->dial_mode;
+    comboBoxMapper[ui->dial_desc_cb] = &analogModel->dial_mode;
+    colorPushButtonMapper[ui->dial_color_p] = &analogModel->dial_color;
 
 }
 void SettingWindow::setPages(){
@@ -80,8 +88,17 @@ void SettingWindow::comboBoxChanged(int index){
      generalModel->settingChanged();
 }
 
-void SettingWindow::colorPushButtonClicked(bool clicked){
-    //TODO QColorWindow
+void SettingWindow::colorPushButtonClicked(){
+    QPushButton* button = qobject_cast<QPushButton*>(sender());
+    QColor old_color = *colorPushButtonMapper[button];
+    QColor new_color = QColorDialog::getColor(old_color, this);
+    *colorPushButtonMapper[button] = new_color;
+
+    button->setText(new_color.name());
+
+    generalModel->settingChanged();
+
+
 }
 
 void SettingWindow::checkBoxChanged(int state){
@@ -129,7 +146,7 @@ void SettingWindow::loadSetting(){
     while (pb.hasNext()) {
         pb.next();
         pb.key()->setText(pb.value()->name());
-        connect(pb.key(), SIGNAL(clicked(bool)), this, SLOT(colorPushButtonClicked(bool)));
+        connect(pb.key(), SIGNAL(clicked()), this, SLOT(colorPushButtonClicked()));
     }
 
     QMapIterator<QLineEdit*,QString*> le(lineEditMapper);
