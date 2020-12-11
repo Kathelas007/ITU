@@ -53,7 +53,8 @@ void SettingWindow::setMappers(){
     comboBoxMapper[ui->format_cb] = &digitalModel->format;
     lineEditMapper[ui->deliminer_le] = &digitalModel->deliminer;
 
-//
+//    Analog
+    // TODO
 
 }
 void SettingWindow::setPages(){
