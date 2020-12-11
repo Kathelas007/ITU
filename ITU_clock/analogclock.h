@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <QtQuickWidgets/QQuickWidget>
 
 class AnalogClock : public QWidget
 {
@@ -11,6 +12,7 @@ public:
     explicit AnalogClock(QWidget *parent = nullptr);
 
 private:
+    void buildClock();
     void displayClock();
 
 private slots:

@@ -58,9 +58,8 @@ void ClockWindow::set_close_minim_buttons(QGridLayout * layout){
 }
 
 QToolButton* ClockWindow::display_close_button(QHBoxLayout* layout){
-    //properly implement (the others too)
-    //bind to correct actions, probs self defined, or just use it as normal push buttons, should be possible
-    //set button style
+
+    //set styles of buttons (maybe transparency, definitely icons
     QToolButton* button= new QToolButton();
     layout->addWidget(button, 0, Qt::AlignRight|Qt::AlignTop);
     return button;
@@ -89,12 +88,12 @@ void ClockWindow::display_clock(QGridLayout* layout){
 
     GeneralModel *model = GeneralModel::getInstance();
     if( model->mode == 1 ){
-       this->digital = new DigitalClock();
-       layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
+        this->analog = new AnalogClock();
     }
     else {
-        //zobraz analogovy hodiny
+       this->digital = new DigitalClock();
     }
+    layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
 }
 
 /***********************SLOTS***********************/
@@ -104,10 +103,10 @@ void ClockWindow::hideShowClock(){
 
     if (this->collapsed){
         if (model->mode == 1){
-            this->digital->show();
+            this->analog->show();
         }
         else{
-            //show analog clock
+            this->digital->show();
         }
 
         this->settingsButton->show();
@@ -117,10 +116,10 @@ void ClockWindow::hideShowClock(){
 
     else{
         if(model->mode == 1){
-            this->digital->hide();
+            this->analog->hide();
         }
         else{
-            //hide analog clock
+            this->digital->hide();
         }
 
       this->settingsButton->hide();

@@ -8,6 +8,7 @@
 #include <QHBoxLayout>
 
 #include "digitalclock.h"
+#include "analogclock.h"
 
 #include "generalmodel.h"
 #include "settingwindow.h"
@@ -26,7 +27,8 @@ private slots:
     void showSettings();
 
 private:
-    DigitalClock* digital;
+    DigitalClock* digital = nullptr;
+    AnalogClock* analog = nullptr;
 
     QGridLayout* windowLayout;
 
