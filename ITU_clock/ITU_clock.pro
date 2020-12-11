@@ -15,6 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    analogclock.cpp \
     analogmodel.cpp \
     digitalclock.cpp \
     digitalmodel.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
     settingwindow.cpp
 
 HEADERS += \
+    analogclock.h \
     analogmodel.h \
     clockwindow.h \
     digitalclock.h \

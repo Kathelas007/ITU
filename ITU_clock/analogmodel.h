@@ -14,7 +14,6 @@ private:
    static AnalogModel* instance;
    void loadSetting();
 
-
 public:
    void saveSetting();
    static AnalogModel * getInstance();
