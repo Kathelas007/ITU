@@ -20,9 +20,7 @@ void SettingModel::defaultSetting(){
     settings.setValue("seconds",false);
     settings.setValue("design",1);
     settings.setValue("own", true);
-    settings.setValue("h_color", QColor(Qt::black));
-    settings.setValue("m_color", QColor(Qt::black));
-    settings.setValue("s_color", QColor(Qt::black));
+    settings.setValue("dial_color", QColor(Qt::red));
     settings.setValue("b_color", QColor(Qt::white));
     settings.endGroup();
 
@@ -33,8 +31,10 @@ void SettingModel::defaultSetting(){
 
     settings.beginGroup("Analog");
     settings.setValue("dial_mode", 0);
-    settings.setValue("dial_description", 0);
-    settings.setValue("dial_color", QColor(Qt::red));
+    settings.setValue("dial_description", 1);
+    settings.setValue("h_color", QColor(Qt::black));
+    settings.setValue("m_color", QColor(Qt::black));
+    settings.setValue("s_color", QColor(Qt::black));
     settings.endGroup();
 }
 

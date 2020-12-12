@@ -16,6 +16,7 @@ DigitalClock::DigitalClock(QWidget *parent) : QLCDNumber(parent)
     displayClock();
 }
 
+/********************SLOTS*********************/
 
 void DigitalClock::displayClock(){
 
@@ -26,8 +27,7 @@ void DigitalClock::displayClock(){
     this->setStyleSheet("background-color: rgba(" + QString::number(qRed(bGround)) +"," + QString::number(qGreen(bGround)) +"," + QString::number(qBlue(bGround)) + ","+ QString::number(model->opacity) +");");
 
     //setup color
-    //TODO: upravit, aby zobrazovalo pro jednotlivé kusy zvlášť, jestli to jde
-    setPalette(model->h_color);
+    setPalette(model->dial_color);
 
     //setup time display format
     this->timeFormat = "";
@@ -44,8 +44,6 @@ void DigitalClock::displayClock(){
 
     displayTime();
 }
-
-/********************SLOTS*********************/
 
 void DigitalClock::displayTime(){
     QTime time = QTime::currentTime();

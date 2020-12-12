@@ -80,9 +80,6 @@ QToolButton* ClockWindow::display_settings_button(QGridLayout *layout){
 }
 
 void ClockWindow::setup_window(QWidget* widget){
-
-    /*GeneralModel *model = GeneralModel::getInstance();
-    widget->setStyleSheet("background-color: rgba(153,151,150,"+ QString::number(model->opacity) +");");*/
 }
 
 void ClockWindow::display_clock(QGridLayout* layout){

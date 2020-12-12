@@ -14,14 +14,16 @@ class DigitalClock : public QLCDNumber
 public:
     explicit DigitalClock(QWidget *parent = nullptr);
 
+
+public slots:
+    void displayClock();
+
 private slots:
     void displayTime();
 
 private:
 
     QString timeFormat;
-
-    void displayClock();
 
 signals:
 

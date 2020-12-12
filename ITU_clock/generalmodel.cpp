@@ -29,9 +29,7 @@ void GeneralModel::loadSetting(){
     seconds = settings.value("seconds").toBool();
     design = settings.value("design").toInt();
     own = settings.value("own").toBool();
-    h_color = settings.value("h_color").value<QColor>();
-    m_color = settings.value("m_color").value<QColor>();
-    s_color = settings.value("s_color").value<QColor>();
+    dial_color = settings.value("dial_color").value<QColor>();
     b_color = settings.value("b_color").value<QColor>();
     settings.endGroup();
 }
@@ -46,9 +44,7 @@ void GeneralModel::saveSetting(){
     settings.setValue("seconds", seconds);
     settings.setValue("design", design);
     settings.setValue("own", own);
-    settings.setValue("h_color", h_color);
-    settings.setValue("m_color", m_color);
-    settings.setValue("s_color", s_color);
+    settings.setValue("dial_color", dial_color);
     settings.setValue("b_color", b_color);
     settings.endGroup();
 }

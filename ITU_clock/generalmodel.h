@@ -30,9 +30,7 @@ public:
     int design;
     bool own;
 
-    QColor h_color;
-    QColor m_color;
-    QColor s_color;
+    QColor dial_color;
     QColor b_color;
 
 

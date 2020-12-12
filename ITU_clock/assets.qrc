@@ -17,5 +17,8 @@
         <file>assets/clock_face_partial_markings.png</file>
         <file>assets/clock_face_quarter_numbers.png</file>
         <file>assets/clock_face_none.png</file>
+        <file>assets/hour_needle.png</file>
+        <file>assets/minute_needle.png</file>
+        <file>assets/second_needle.png</file>
     </qresource>
 </RCC>

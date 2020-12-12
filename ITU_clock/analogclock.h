@@ -27,19 +27,30 @@ public:
 private:
     QGraphicsScene* clockScene;
     QGraphicsPixmapItem* clockFace=nullptr;
-    QGraphicsRectItem* hourNeedle = nullptr;
-    QGraphicsRectItem* minuteNeedle = nullptr;
-    QGraphicsRectItem* secondNeedle = nullptr;
+    QGraphicsPixmapItem* hourNeedleItem;
+    QGraphicsPixmapItem* minuteNeedleItem;
+    QGraphicsPixmapItem* secondNeedleItem;
+
+    //QGraphicsRectItem* hourNeedle = nullptr;
+    //QGraphicsRectItem* minuteNeedle = nullptr;
+    //QGraphicsRectItem* secondNeedle = nullptr;
 
     QImage* faceImage;
+    QImage* hourNeedle;
+    QImage* minuteNeedle;
+    QImage* secondNeedle;
+
     QRegion* circleRegion;
     //QPainter* clockFacePainter;
 
     //items of the clock
 
     void buildClock();
-    void displayClock();
     void paintClockFace();
+    void paintNeedles();
+
+public slots:
+    void displayClock();
 
 private slots:
     void displayTime();

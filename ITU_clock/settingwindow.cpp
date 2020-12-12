@@ -51,9 +51,9 @@ void SettingWindow::setMappers(){
     checkBoxMapper[ui->seconds_chb] = qMakePair(generalModel,&generalModel->seconds);
     checkBoxMapper[ui->own_chb] = qMakePair(generalModel,&generalModel->own);
 
-    colorPushButtonMapper[ui->h_color_b] = qMakePair(generalModel,&generalModel->h_color);
-    colorPushButtonMapper[ui->m_color_b] = qMakePair(generalModel,&generalModel->m_color);
-    colorPushButtonMapper[ui->s_color_b] = qMakePair(generalModel,&generalModel->s_color);
+    colorPushButtonMapper[ui->h_color_b] = qMakePair(analogModel,&analogModel->h_color);
+    colorPushButtonMapper[ui->m_color_b] = qMakePair(analogModel,&analogModel->m_color);
+    colorPushButtonMapper[ui->s_color_b] = qMakePair(analogModel,&analogModel->s_color);
     colorPushButtonMapper[ui->b_color_b] = qMakePair(generalModel,&generalModel->b_color);
 
 //    Digital
@@ -63,7 +63,7 @@ void SettingWindow::setMappers(){
 //    Analog
     comboBoxMapper[ui->dial_mode_cb] = qMakePair(analogModel, &analogModel->dial_mode);
     comboBoxMapper[ui->dial_desc_cb] = qMakePair(analogModel, &analogModel->dial_mode);
-    colorPushButtonMapper[ui->dial_color_p] = qMakePair(analogModel, &analogModel->dial_color);
+    colorPushButtonMapper[ui->dial_color_p] = qMakePair(generalModel, &generalModel->dial_color);
 }
 void SettingWindow::setPages(){
 

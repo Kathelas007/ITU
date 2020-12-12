@@ -20,7 +20,9 @@ public:
 
    int dial_mode;
    int dial_description;
-   QColor dial_color;
+   QColor h_color;
+   QColor m_color;
+   QColor s_color;
 
 };
 
