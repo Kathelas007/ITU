@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/1.png</file>
+        <file>assets/10.png</file>
+        <file>assets/11.png</file>
+        <file>assets/12.png</file>
+        <file>assets/2.png</file>
+        <file>assets/3.png</file>
+        <file>assets/4.png</file>
+        <file>assets/5.png</file>
+        <file>assets/6.png</file>
+        <file>assets/7.png</file>
+        <file>assets/8.png</file>
+        <file>assets/9.png</file>
+        <file>assets/clock_face_full_markings.png</file>
+        <file>assets/clock_face_full_numbers.png</file>
+        <file>assets/clock_face_partial_markings.png</file>
+        <file>assets/clock_face_quarter_numbers.png</file>
+        <file>assets/clock_face_none.png</file>
+    </qresource>
+</RCC>

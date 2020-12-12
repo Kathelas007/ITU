@@ -20,10 +20,11 @@ ClockWindow::ClockWindow(QWidget *parent)
     set_close_minim_buttons(this->windowLayout);
     this->settingsButton = this->display_settings_button(this->windowLayout);
 
+    widget->setStyleSheet("background-color: rgba(153,151,150,0");
+
     //appearance based on settings
     this->setup_window(widget);
     this->display_clock(this->windowLayout);
-
 
     setCentralWidget(widget);
 
@@ -80,8 +81,8 @@ QToolButton* ClockWindow::display_settings_button(QGridLayout *layout){
 
 void ClockWindow::setup_window(QWidget* widget){
 
-    GeneralModel *model = GeneralModel::getInstance();
-    widget->setStyleSheet("background-color: rgba(153,151,150,"+ QString::number(model->opacity) +");");
+    /*GeneralModel *model = GeneralModel::getInstance();
+    widget->setStyleSheet("background-color: rgba(153,151,150,"+ QString::number(model->opacity) +");");*/
 }
 
 void ClockWindow::display_clock(QGridLayout* layout){
@@ -89,11 +90,13 @@ void ClockWindow::display_clock(QGridLayout* layout){
     GeneralModel *model = GeneralModel::getInstance();
     if( model->mode == 1 ){
         this->analog = new AnalogClock();
+        layout->addWidget(analog, 2, 1, 1, 3, Qt::AlignCenter);
     }
     else {
        this->digital = new DigitalClock();
+        layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
     }
-    layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
+
 }
 
 /***********************SLOTS***********************/
