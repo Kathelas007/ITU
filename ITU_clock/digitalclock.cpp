@@ -22,7 +22,8 @@ void DigitalClock::displayClock(){
     GeneralModel* model = GeneralModel::getInstance();
 
     //TODO:nastavit správně nejen průhlednost, ale i barvu pozadí
-    this->setStyleSheet("background-color: rgba(153,151,150,"+ QString::number(model->opacity) +");");
+    QRgb bGround = model->b_color.rgb();
+    this->setStyleSheet("background-color: rgba(" + QString::number(qRed(bGround)) +"," + QString::number(qGreen(bGround)) +"," + QString::number(qBlue(bGround)) + ","+ QString::number(model->opacity) +");");
 
     //setup color
     //TODO: upravit, aby zobrazovalo pro jednotlivé kusy zvlášť, jestli to jde

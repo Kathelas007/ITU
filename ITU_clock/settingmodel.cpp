@@ -14,7 +14,7 @@ void SettingModel::defaultSetting(){
     QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
     settings.beginGroup("General");
     settings.setValue("mode", 1);
-    settings.setValue("opacity", true);
+    settings.setValue("opacity", false);
     settings.setValue("hours", true);
     settings.setValue("minutes", true);
     settings.setValue("seconds",false);
@@ -32,8 +32,8 @@ void SettingModel::defaultSetting(){
     settings.endGroup();
 
     settings.beginGroup("Analog");
-    settings.setValue("dial_mode", 1);
-    settings.setValue("dial_description", 1);
+    settings.setValue("dial_mode", 0);
+    settings.setValue("dial_description", 0);
     settings.setValue("dial_color", QColor(Qt::red));
     settings.endGroup();
 }

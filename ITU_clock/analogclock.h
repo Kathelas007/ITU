@@ -11,6 +11,9 @@
 #include <QImage>
 #include <QPolygonF>
 #include <QBrush>
+#include <QRegion>
+#include <QPainter>
+#include <QBitmap>
 
 #include "generalmodel.h"
 #include "analogmodel.h"
@@ -29,11 +32,14 @@ private:
     QGraphicsRectItem* secondNeedle = nullptr;
 
     QImage* faceImage;
+    QRegion* circleRegion;
+    //QPainter* clockFacePainter;
 
     //items of the clock
 
     void buildClock();
     void displayClock();
+    void paintClockFace();
 
 private slots:
     void displayTime();
