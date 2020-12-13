@@ -65,7 +65,7 @@
     <message>
         <location filename="settingwindow.ui" line="399"/>
         <source>Default design</source>
-        <translation>Voreinstellung</translation>
+        <translation>Voreinstellung Design</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="413"/>
@@ -85,7 +85,7 @@
     <message>
         <location filename="settingwindow.ui" line="475"/>
         <source>Backgroud color</source>
-        <translation>Hintergrund</translation>
+        <translation>Hintergrund Farbe</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="494"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="settingwindow.ui" line="505"/>
         <source>Dial color</source>
-        <translation>Ziffrenblatte farbe</translation>
+        <translation>Ziffrenblatte Farbe</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="580"/>

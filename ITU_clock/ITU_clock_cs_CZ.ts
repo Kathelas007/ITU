@@ -47,13 +47,13 @@
     </message>
     <message>
         <location filename="settingwindow.ui" line="353"/>
-        <location filename="settingwindow.ui" line="727"/>
+        <location filename="settingwindow.ui" line="703"/>
         <source>Hours</source>
         <translation>Hodiny</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="363"/>
-        <location filename="settingwindow.ui" line="732"/>
+        <location filename="settingwindow.ui" line="708"/>
         <source>Minutes</source>
         <translation>Minuty</translation>
     </message>
@@ -68,138 +68,136 @@
         <translation>Výchozí vzhled</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="413"/>
-        <source>Ubuntu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="settingwindow.ui" line="418"/>
         <source>Light</source>
-        <translation>Světlý</translation>
+        <translation type="vanished">Světlý</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="445"/>
         <source>Own design</source>
-        <translation>Vlastní vzhled</translation>
+        <translation type="vanished">Vlastní vzhled</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="475"/>
+        <location filename="settingwindow.ui" line="427"/>
+        <source>Turn On</source>
+        <translation>Vypnout</translation>
+    </message>
+    <message>
+        <location filename="settingwindow.ui" line="451"/>
         <source>Backgroud color</source>
         <translation>Barva pozadí</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="494"/>
-        <location filename="settingwindow.ui" line="524"/>
-        <location filename="settingwindow.ui" line="842"/>
-        <location filename="settingwindow.ui" line="872"/>
-        <location filename="settingwindow.ui" line="902"/>
+        <location filename="settingwindow.ui" line="470"/>
+        <location filename="settingwindow.ui" line="500"/>
+        <location filename="settingwindow.ui" line="818"/>
+        <location filename="settingwindow.ui" line="848"/>
+        <location filename="settingwindow.ui" line="878"/>
         <source>#fff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="505"/>
+        <location filename="settingwindow.ui" line="481"/>
         <source>Dial color</source>
         <translation type="unfinished">Barva ciferníku</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="580"/>
+        <location filename="settingwindow.ui" line="556"/>
         <source>Format</source>
         <translation>Formát</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="600"/>
+        <location filename="settingwindow.ui" line="576"/>
         <source>12 h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="605"/>
+        <location filename="settingwindow.ui" line="581"/>
         <source>24 h</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="628"/>
+        <location filename="settingwindow.ui" line="604"/>
         <source>Delimiter</source>
         <translation>Oddělovač</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="647"/>
+        <location filename="settingwindow.ui" line="623"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="707"/>
+        <location filename="settingwindow.ui" line="683"/>
         <source>Dial mode</source>
         <translation>Mód oddělovače</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="737"/>
-        <location filename="settingwindow.ui" line="798"/>
+        <location filename="settingwindow.ui" line="713"/>
+        <location filename="settingwindow.ui" line="774"/>
         <source>None</source>
         <translation>Žádný</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="760"/>
+        <location filename="settingwindow.ui" line="736"/>
         <source>Dial description</source>
         <translation>Popis ciferníku</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="779"/>
-        <location filename="settingwindow.ui" line="783"/>
+        <location filename="settingwindow.ui" line="755"/>
+        <location filename="settingwindow.ui" line="759"/>
         <source>Numbers</source>
         <translation>Čísla</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="788"/>
+        <location filename="settingwindow.ui" line="764"/>
         <source>Markings</source>
         <translation type="unfinished">Značky</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="793"/>
+        <location filename="settingwindow.ui" line="769"/>
         <source>Roman</source>
         <translation>Římské</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="823"/>
+        <location filename="settingwindow.ui" line="799"/>
         <source>Hour color</source>
         <translation>Barva hodinové ručičky</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="853"/>
+        <location filename="settingwindow.ui" line="829"/>
         <source>Minute color</source>
         <translation>Barva minutové ručičky</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="883"/>
+        <location filename="settingwindow.ui" line="859"/>
         <source>Second color</source>
         <translation>Barva sekundové ručičky</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="958"/>
+        <location filename="settingwindow.ui" line="934"/>
         <source>Language</source>
         <translation>Jazyk</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="978"/>
+        <location filename="settingwindow.ui" line="954"/>
         <source>English</source>
         <translation>Angličtina</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="983"/>
+        <location filename="settingwindow.ui" line="959"/>
         <source>Czech</source>
         <translation>Čeština</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="988"/>
+        <location filename="settingwindow.ui" line="964"/>
         <source>German</source>
         <translation>Němčina</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="1011"/>
+        <location filename="settingwindow.ui" line="987"/>
         <source>Syslem clock setting</source>
         <translation>Systémové hodiny</translation>
     </message>
     <message>
-        <location filename="settingwindow.ui" line="1030"/>
+        <location filename="settingwindow.ui" line="1006"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
