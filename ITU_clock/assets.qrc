@@ -24,5 +24,6 @@
         <file>assets/window-maximize-symbolic.png</file>
         <file>assets/window-minimize-symbolic.png</file>
         <file>assets/playlist-automatic-symbolic.png</file>
+        <file>assets/clock_face_full_roman.png</file>
     </qresource>
 </RCC>

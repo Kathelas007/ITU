@@ -8,6 +8,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QTime>
+#include <QCursor>
 
 #include "digitalclock.h"
 #include "analogclock.h"
@@ -66,6 +67,7 @@ private:
     void displayClock(QGridLayout* layout);
 
     void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
 };
 #endif // CLOCKWINDOW_H
