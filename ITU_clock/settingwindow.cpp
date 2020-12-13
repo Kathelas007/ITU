@@ -151,7 +151,6 @@ void SettingWindow::designDisabling(int arg1){
         analogModel->m_color.setNamedColor("#000000") ;
         analogModel->s_color.setNamedColor("#e95420") ;
     }
-
 }
 
 
@@ -244,5 +243,5 @@ void SettingWindow::on_default_design_chb_stateChanged(int arg1)
 
 void SettingWindow::on_system_setting_clicked()
 {
-   system("gnome-control-center \"Date & Time\"");
+   system("gnome-control-center datetime &");
 }

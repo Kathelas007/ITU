@@ -83,7 +83,7 @@
     <message>
         <location filename="settingwindow.ui" line="451"/>
         <source>Backgroud color</source>
-        <translation type="unfinished">Barva Pozadí</translation>
+        <translation type="unfinished">Barva pozadí</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="470"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="settingwindow.ui" line="481"/>
         <source>Dial color</source>
-        <translation type="unfinished">Barva Ciferníku</translation>
+        <translation type="unfinished">Barva ciferníku</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="556"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="settingwindow.ui" line="683"/>
         <source>Dial mode</source>
-        <translation type="unfinished">Mód Oddělovače</translation>
+        <translation type="unfinished">Mód ciferníku</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="713"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="settingwindow.ui" line="736"/>
         <source>Dial description</source>
-        <translation type="unfinished">Popis Ciferníku</translation>
+        <translation type="unfinished">Popis ciferníku</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="755"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="settingwindow.ui" line="987"/>
         <source>Syslem clock setting</source>
-        <translation type="unfinished">Systémové Hodiny</translation>
+        <translation type="unfinished">Systémové hodiny</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="1006"/>
