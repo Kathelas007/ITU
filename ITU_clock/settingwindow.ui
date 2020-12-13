@@ -197,7 +197,7 @@ QPushButton:checked{
        <enum>QFrame::Raised</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -447,7 +447,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="dial_color_p">
+                 <widget class="QPushButton" name="b_color_b">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -477,7 +477,7 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="b_color_b">
+                 <widget class="QPushButton" name="dial_color_p">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -617,7 +617,7 @@ QPushButton:checked{
                  <string>:</string>
                 </property>
                 <property name="maxLength">
-                 <number>3</number>
+                 <number>1</number>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>

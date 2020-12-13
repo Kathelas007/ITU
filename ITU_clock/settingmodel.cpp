@@ -26,7 +26,7 @@ void SettingModel::defaultSetting(){
 
     settings.beginGroup("Digital");
     settings.setValue("format", 1);
-    settings.setValue("deliminer", "*");
+    settings.setValue("deliminer", ":");
     settings.endGroup();
 
     settings.beginGroup("Analog");

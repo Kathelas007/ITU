@@ -13,14 +13,15 @@
 #include "generalmodel.h"
 #include "settingwindow.h"
 
-
-
 class ClockWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
     ClockWindow(QWidget *parent = nullptr);
+
+public slots:
+    void checkDisplayed();
 
 private slots:
     void hideShowClock();
@@ -54,8 +55,7 @@ private:
     QToolButton* display_minimize_button(QHBoxLayout* layout);
     QToolButton* display_settings_button(QGridLayout* layout);
 
-    void setup_window(QWidget* widget);
-    void display_clock(QGridLayout* layout);
+    void displayClock(QGridLayout* layout);
 
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);

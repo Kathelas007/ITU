@@ -62,7 +62,7 @@ void SettingWindow::setMappers(){
 
 //    Analog
     comboBoxMapper[ui->dial_mode_cb] = qMakePair(analogModel, &analogModel->dial_mode);
-    comboBoxMapper[ui->dial_desc_cb] = qMakePair(analogModel, &analogModel->dial_mode);
+    comboBoxMapper[ui->dial_desc_cb] = qMakePair(analogModel, &analogModel->dial_description);
     colorPushButtonMapper[ui->dial_color_p] = qMakePair(generalModel, &generalModel->dial_color);
 }
 void SettingWindow::setPages(){

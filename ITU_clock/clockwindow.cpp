@@ -23,8 +23,7 @@ ClockWindow::ClockWindow(QWidget *parent)
     widget->setStyleSheet("background-color: rgba(153,151,150,0");
 
     //appearance based on settings
-    this->setup_window(widget);
-    this->display_clock(this->windowLayout);
+    this->displayClock(this->windowLayout);
 
     setCentralWidget(widget);
 
@@ -32,6 +31,7 @@ ClockWindow::ClockWindow(QWidget *parent)
     connect(this->closeButton, SIGNAL(clicked()), qApp, SLOT(quit()));
     connect(this->minimButton, SIGNAL(clicked()), this, SLOT(hideShowClock()));
     connect(this->settingsButton, SIGNAL(clicked()), this, SLOT(showSettings()));
+    connect(GeneralModel::getInstance(), SIGNAL(settingChanged()), this, SLOT(checkDisplayed()));
 }
 
 void ClockWindow::mousePressEvent(QMouseEvent *event) {
@@ -79,24 +79,42 @@ QToolButton* ClockWindow::display_settings_button(QGridLayout *layout){
     return button;
 }
 
-void ClockWindow::setup_window(QWidget* widget){
-}
-
-void ClockWindow::display_clock(QGridLayout* layout){
+void ClockWindow::displayClock(QGridLayout* layout){
 
     GeneralModel *model = GeneralModel::getInstance();
     if( model->mode == 1 ){
-        this->analog = new AnalogClock();
-        layout->addWidget(analog, 2, 1, 1, 3, Qt::AlignCenter);
+        if(this->digital != nullptr){
+            this->digital->hide();
+        }
+
+        if(this->analog == nullptr){
+            this->analog = new AnalogClock();
+            layout->addWidget(analog, 2, 1, 1, 3, Qt::AlignCenter);
+            return;
+        }
+        this->analog->show();
     }
     else {
-       this->digital = new DigitalClock();
-        layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
+       if (this->analog != nullptr){
+           this->analog->hide();
+       }
+
+       if(this->digital == nullptr){
+            this->digital = new DigitalClock();
+            layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
+            return;
+       }
+       this->digital->show();
     }
 
 }
 
 /***********************SLOTS***********************/
+
+void ClockWindow::checkDisplayed(){
+    this->displayClock(this->windowLayout);
+}
+
 void ClockWindow::hideShowClock(){
 
     GeneralModel* model = GeneralModel::getInstance();

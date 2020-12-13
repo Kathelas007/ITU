@@ -7,6 +7,7 @@
 #include <QTime>
 
 #include "generalmodel.h"
+#include "digitalmodel.h"
 
 class DigitalClock : public QLCDNumber
 {

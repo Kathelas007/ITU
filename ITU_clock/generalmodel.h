@@ -19,7 +19,6 @@ public:
 
     static GeneralModel * getInstance();
 
-    // todo add window size
     int mode;
     int opacity;
 
@@ -32,7 +31,6 @@ public:
 
     QColor dial_color;
     QColor b_color;
-
 
 };
 

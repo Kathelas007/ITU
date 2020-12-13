@@ -17,6 +17,7 @@
 
 #include "generalmodel.h"
 #include "analogmodel.h"
+#include "settingmodel.h"
 
 class AnalogClock : public QGraphicsView
 {
@@ -31,23 +32,27 @@ private:
     QGraphicsPixmapItem* minuteNeedleItem;
     QGraphicsPixmapItem* secondNeedleItem;
 
-    //QGraphicsRectItem* hourNeedle = nullptr;
-    //QGraphicsRectItem* minuteNeedle = nullptr;
-    //QGraphicsRectItem* secondNeedle = nullptr;
-
     QImage* faceImage;
     QImage* hourNeedle;
     QImage* minuteNeedle;
     QImage* secondNeedle;
 
     QRegion* circleRegion;
-    //QPainter* clockFacePainter;
-
-    //items of the clock
 
     void buildClock();
     void paintClockFace();
     void paintNeedles();
+    void selectClockFaceType();
+
+    int lastDialMode;
+    int lastDescription;
+
+    qreal faceScale = 0.256;
+
+    QColor lastFaceColor;
+    QColor lastHourColor;
+    QColor lastMinuteColor;
+    QColor lastSecondColor;
 
 public slots:
     void displayClock();
