@@ -595,7 +595,7 @@ QPushButton:checked{
               <item>
                <widget class="QLabel" name="label_10">
                 <property name="text">
-                 <string>Deliminer</string>
+                 <string>Delimiter</string>
                 </property>
                </widget>
               </item>

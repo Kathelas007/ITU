@@ -33,10 +33,10 @@ SettingWindow::SettingWindow(QWidget *parent) :
 
 SettingWindow::~SettingWindow()
 {
-    delete ui;
     generalModel->saveSetting();
     digitalModel->saveSetting();
     analogModel->saveSetting();
+    delete ui;
 }
 
 void SettingWindow::setMappers(){
