@@ -8,8 +8,8 @@
 #include <QColor>
 #include <QColorDialog>
 #include <QDebug>
-#include<QFontDialog>
-#include<QColorDialog>
+#include <QFontDialog>
+#include <QColorDialog>
 #include <QTranslator>
 
 #include "generalmodel.h"
@@ -150,7 +150,6 @@ void SettingWindow::designDisabling(int arg1){
         analogModel->h_color.setNamedColor("#000000") ;
         analogModel->m_color.setNamedColor("#000000") ;
         analogModel->s_color.setNamedColor("#e95420") ;
-
     }
 
 }

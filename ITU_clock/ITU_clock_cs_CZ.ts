@@ -78,12 +78,12 @@
     <message>
         <location filename="settingwindow.ui" line="427"/>
         <source>Turn On</source>
-        <translation>Vypnout</translation>
+        <translation>Zapnout</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="451"/>
         <source>Backgroud color</source>
-        <translation>Barva pozadí</translation>
+        <translation type="unfinished">Barva Pozadí</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="470"/>
@@ -97,7 +97,7 @@
     <message>
         <location filename="settingwindow.ui" line="481"/>
         <source>Dial color</source>
-        <translation type="unfinished">Barva ciferníku</translation>
+        <translation type="unfinished">Barva Ciferníku</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="556"/>
@@ -127,7 +127,7 @@
     <message>
         <location filename="settingwindow.ui" line="683"/>
         <source>Dial mode</source>
-        <translation>Mód oddělovače</translation>
+        <translation type="unfinished">Mód Oddělovače</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="713"/>
@@ -138,7 +138,7 @@
     <message>
         <location filename="settingwindow.ui" line="736"/>
         <source>Dial description</source>
-        <translation>Popis ciferníku</translation>
+        <translation type="unfinished">Popis Ciferníku</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="755"/>
@@ -194,7 +194,7 @@
     <message>
         <location filename="settingwindow.ui" line="987"/>
         <source>Syslem clock setting</source>
-        <translation>Systémové hodiny</translation>
+        <translation type="unfinished">Systémové Hodiny</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="1006"/>
