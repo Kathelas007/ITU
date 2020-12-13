@@ -12,6 +12,8 @@ DigitalModel::DigitalModel() : SettingModel()
 {
     group = "Digital";
     loadSetting();
+
+    connect(this, SIGNAL(settingChanged()), this, SLOT(saveSetting()));
 }
 
 DigitalModel* DigitalModel::getInstance(){

@@ -10,6 +10,8 @@ GeneralModel::GeneralModel() : SettingModel()
 {
     group = "General";
     loadSetting();
+
+    connect(this, SIGNAL(settingChanged()), this, SLOT(saveSetting()));
 }
 
 GeneralModel* GeneralModel::getInstance(){

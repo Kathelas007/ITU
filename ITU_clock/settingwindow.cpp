@@ -33,9 +33,6 @@ SettingWindow::SettingWindow(QWidget *parent) :
 
 SettingWindow::~SettingWindow()
 {
-    generalModel->saveSetting();
-    digitalModel->saveSetting();
-    analogModel->saveSetting();
     delete ui;
 }
 

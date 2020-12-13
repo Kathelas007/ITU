@@ -14,8 +14,10 @@ class GeneralModel : public SettingModel
     static GeneralModel* instance;
     void loadSetting();
 
-public:
+public slots:
     void saveSetting();
+
+public:
 
     static GeneralModel * getInstance();
 

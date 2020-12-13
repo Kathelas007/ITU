@@ -14,8 +14,9 @@ private:
     void loadSetting();
 
 
-public:
+public slots:
     void saveSetting();
+public:
     static DigitalModel * getInstance();
 
     int format;

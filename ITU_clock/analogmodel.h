@@ -14,8 +14,9 @@ private:
    static AnalogModel* instance;
    void loadSetting();
 
-public:
+public slots:
    void saveSetting();
+public:
    static AnalogModel * getInstance();
 
    int dial_mode;

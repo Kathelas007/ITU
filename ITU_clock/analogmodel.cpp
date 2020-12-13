@@ -6,6 +6,8 @@ AnalogModel::AnalogModel()
 {
     group = "Analog";
     loadSetting();
+
+    connect(this, SIGNAL(settingChanged()), this, SLOT(saveSetting()));
 }
 
 AnalogModel* AnalogModel::getInstance(){
