@@ -242,3 +242,8 @@ void SettingWindow::on_default_design_chb_stateChanged(int arg1)
 {
     designDisabling(arg1);
 }
+
+void SettingWindow::on_system_setting_clicked()
+{
+   system("gnome-control-center \"Date & Time\"");
+}

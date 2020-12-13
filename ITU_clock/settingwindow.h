@@ -57,6 +57,8 @@ private slots:
 
    void on_default_design_chb_stateChanged(int arg1);
 
+   void on_system_setting_clicked();
+
 private:
        Ui::SettingWindow *ui;
        QPushButton* activeButton;
