@@ -4,7 +4,7 @@
 #include "clockwindow.h"
 
 ClockWindow::ClockWindow(QWidget *parent)
-    : QMainWindow(parent, Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint)
+    : QMainWindow(parent, Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint|Qt::Tool)
 {
     //basic appearance
 
