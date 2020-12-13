@@ -22,6 +22,8 @@ SettingWindow::SettingWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    this->setWindowTitle(tr("ITU clock"));
+
     digitalModel = DigitalModel::getInstance();
     generalModel = GeneralModel::getInstance();
     analogModel = AnalogModel::getInstance();
