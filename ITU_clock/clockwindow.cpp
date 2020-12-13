@@ -11,6 +11,7 @@ ClockWindow::ClockWindow(QWidget *parent)
     setAttribute(Qt::WA_NoSystemBackground, true);
     setAttribute(Qt::WA_TranslucentBackground, true);
     statusBar()->hide();
+    setCursor(Qt::OpenHandCursor);
     setMinimumSize(this->collapsedW, this->collapsedH);
     resize(this->baseW,this->baseH);
 
@@ -43,6 +44,12 @@ ClockWindow::ClockWindow(QWidget *parent)
 void ClockWindow::mousePressEvent(QMouseEvent *event) {
     mouseCoordX = event->x();
     mouseCoordY = event->y();
+
+    this->setCursor(Qt::ClosedHandCursor);
+}
+
+void ClockWindow::mouseReleaseEvent(QMouseEvent *event){
+    this->setCursor(Qt::OpenHandCursor);
 }
 
 void ClockWindow::mouseMoveEvent(QMouseEvent *event) {
@@ -108,7 +115,7 @@ void ClockWindow::displayClock(QGridLayout* layout){
         }
 
         if(this->analog == nullptr){
-            this->analog = new AnalogClock();
+            this->analog = new AnalogClock(this);
             layout->addWidget(analog, 2, 1, 1, 3, Qt::AlignCenter);
             return;
         }
@@ -120,7 +127,7 @@ void ClockWindow::displayClock(QGridLayout* layout){
        }
 
        if(this->digital == nullptr){
-            this->digital = new DigitalClock();
+            this->digital = new DigitalClock(this);
             layout->addWidget(digital, 2, 1, 1, 3, Qt::AlignCenter);
             return;
        }
