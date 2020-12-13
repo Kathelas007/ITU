@@ -10,10 +10,13 @@
 #include <QDebug>
 #include<QFontDialog>
 #include<QColorDialog>
+#include <QTranslator>
 
 #include "generalmodel.h"
 #include "digitalmodel.h"
 #include "analogmodel.h"
+#include "translator.h"
+#include "main.h"
 
 
 SettingWindow::SettingWindow(QWidget *parent) :
@@ -21,6 +24,8 @@ SettingWindow::SettingWindow(QWidget *parent) :
     ui(new Ui::SettingWindow)
 {
     ui->setupUi(this);
+
+    connect(this, SIGNAL(languageChanged()), translator, SLOT(updateLanguage()));
 
     this->setWindowTitle(tr("ITU clock"));
 
@@ -63,6 +68,8 @@ void SettingWindow::setMappers(){
     comboBoxMapper[ui->dial_mode_cb] = qMakePair(analogModel, &analogModel->dial_mode);
     comboBoxMapper[ui->dial_desc_cb] = qMakePair(analogModel, &analogModel->dial_description);
     colorPushButtonMapper[ui->dial_color_p] = qMakePair(generalModel, &generalModel->dial_color);
+
+
 }
 void SettingWindow::setPages(){
 
@@ -73,6 +80,7 @@ void SettingWindow::setPages(){
     button_to_pages[ui->pushButton_1] = ui->page_1;
     button_to_pages[ui->pushButton_2] = ui->page_2;
     button_to_pages[ui->pushButton_3] = ui->page_3;
+    button_to_pages[ui->pushButton_4] = ui->page_4;
 
     QMapIterator<QPushButton*, QWidget*> i(button_to_pages);
     while (i.hasNext()) {
@@ -169,6 +177,26 @@ void SettingWindow::loadSetting(){
     }
 
     designDisabling(ui->own_chb->isChecked());
+
+    setLanguage();
+}
+
+void SettingWindow::setLanguage(){
+
+    if(generalModel->language == -1){
+        auto loc = QLocale();
+        if(loc == QLocale::English)
+            ui->language_cb_2->setCurrentIndex(0);
+        else if(loc == QLocale::Czech)
+            ui->language_cb_2->setCurrentIndex(1);
+        else if(loc == QLocale::German)
+            ui->language_cb_2->setCurrentIndex(3);
+        else
+            ui->language_cb_2->setCurrentIndex(0);
+    }
+
+    else
+        ui->language_cb_2->setCurrentIndex(generalModel->language);
 }
 
 void SettingWindow::changePage(bool active){
@@ -187,4 +215,12 @@ void SettingWindow::changePage(bool active){
 void SettingWindow::on_own_chb_stateChanged(int arg1)
 {
     designDisabling(arg1);
+}
+
+void SettingWindow::on_language_cb_2_currentIndexChanged(int index)
+{
+    generalModel->language = index;
+    generalModel->saveSetting();
+
+    emit languageChanged();
 }

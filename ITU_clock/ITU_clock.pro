@@ -24,7 +24,8 @@ SOURCES += \
     main.cpp \
     clockwindow.cpp \
     settingmodel.cpp \
-    settingwindow.cpp
+    settingwindow.cpp \
+    translator.cpp
 
 HEADERS += \
     analogclock.h \
@@ -33,14 +34,17 @@ HEADERS += \
     digitalclock.h \
     digitalmodel.h \
     generalmodel.h \
+    main.h \
     settingmodel.h \
-    settingwindow.h
+    settingwindow.h \
+    translator.h
 
 FORMS += \
     settingwindow.ui
 
 TRANSLATIONS += \
     ITU_clock_cs_CZ.ts
+    ITU_clock_de_DE.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -50,3 +54,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     assets.qrc \
     translation.qrc
+
+DISTFILES += \
+    ITU_clock_de_DE.ts

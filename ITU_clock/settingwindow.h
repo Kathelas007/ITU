@@ -30,6 +30,7 @@ class SettingWindow : public QMainWindow
     void setPages();
     void setMappers();
     void designDisabling(int);
+    void setLanguage();
 
     QMap<QComboBox*, QPair<SettingModel*, int*>> comboBoxMapper;
     QMap<QPushButton*, QPair<SettingModel*,QColor*>> colorPushButtonMapper;
@@ -54,10 +55,15 @@ private slots:
 
    void on_own_chb_stateChanged(int arg1);
 
+   void on_language_cb_2_currentIndexChanged(int index);
+
 private:
        Ui::SettingWindow *ui;
        QPushButton* activeButton;
        QMap<QPushButton *, QWidget *> button_to_pages;
+
+signals:
+    void languageChanged();
 };
 
 #endif // SETTINGWINDOW_H

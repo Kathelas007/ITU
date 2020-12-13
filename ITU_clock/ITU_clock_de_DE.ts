@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ" sourcelanguage="en">
+<TS version="2.1" language="de_DE">
 <context>
     <name>SettingWindow</name>
     <message>
@@ -11,61 +11,61 @@
     <message>
         <location filename="settingwindow.ui" line="108"/>
         <source>General</source>
-        <translation>Obecné</translation>
+        <translation>Haupt</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="138"/>
         <location filename="settingwindow.ui" line="281"/>
         <source>Digital</source>
-        <translation>Digitální</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="168"/>
         <location filename="settingwindow.ui" line="286"/>
         <source>Analog</source>
-        <translation>Analogové</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="198"/>
         <source>Other</source>
-        <translation>Ostatní</translation>
+        <translation>Andere</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="261"/>
         <source>Mode</source>
-        <translation>Mód</translation>
+        <translation>Modus</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="309"/>
         <source>Opacity</source>
-        <translation>Průhlednost</translation>
+        <translation>Undurchsichtigkeit</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="344"/>
         <source>Display</source>
-        <translation>Zobrazit</translation>
+        <translation>Stolzieren</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="353"/>
         <location filename="settingwindow.ui" line="727"/>
         <source>Hours</source>
-        <translation>Hodiny</translation>
+        <translation>Stunden</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="363"/>
         <location filename="settingwindow.ui" line="732"/>
         <source>Minutes</source>
-        <translation>Minuty</translation>
+        <translation>Minuten</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="373"/>
         <source>Seconds</source>
-        <translation>Sekundy</translation>
+        <translation>Sekunden</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="399"/>
         <source>Default design</source>
-        <translation>Výchozí vzhled</translation>
+        <translation>Voreinstellung</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="413"/>
@@ -75,17 +75,17 @@
     <message>
         <location filename="settingwindow.ui" line="418"/>
         <source>Light</source>
-        <translation>Světlý</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="445"/>
         <source>Own design</source>
-        <translation>Vlastní vzhled</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="475"/>
         <source>Backgroud color</source>
-        <translation>Barva pozadí</translation>
+        <translation>Hintergrund</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="494"/>
@@ -99,12 +99,12 @@
     <message>
         <location filename="settingwindow.ui" line="505"/>
         <source>Dial color</source>
-        <translation type="unfinished">Barva ciferníku</translation>
+        <translation>Ziffrenblatte farbe</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="580"/>
         <source>Format</source>
-        <translation>Formát</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="600"/>
@@ -119,7 +119,7 @@
     <message>
         <location filename="settingwindow.ui" line="628"/>
         <source>Delimiter</source>
-        <translation>Oddělovač</translation>
+        <translation>Bergrenzer</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="647"/>
@@ -129,84 +129,84 @@
     <message>
         <location filename="settingwindow.ui" line="707"/>
         <source>Dial mode</source>
-        <translation>Mód oddělovače</translation>
+        <translation>Ziffernblatter Modus</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="737"/>
         <location filename="settingwindow.ui" line="798"/>
         <source>None</source>
-        <translation>Žádný</translation>
+        <translation>Kein</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="760"/>
         <source>Dial description</source>
-        <translation>Popis ciferníku</translation>
+        <translation>Ziffernblatte Beschreibung</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="779"/>
         <location filename="settingwindow.ui" line="783"/>
         <source>Numbers</source>
-        <translation>Čísla</translation>
+        <translation>Nummern</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="788"/>
         <source>Markings</source>
-        <translation type="unfinished">Značky</translation>
+        <translation>Bedrucken</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="793"/>
         <source>Roman</source>
-        <translation>Římské</translation>
+        <translation>Romar</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="823"/>
         <source>Hour color</source>
-        <translation>Barva hodinové ručičky</translation>
+        <translation>Stunden Farbe</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="853"/>
         <source>Minute color</source>
-        <translation>Barva minutové ručičky</translation>
+        <translation>Minten Farbe</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="883"/>
         <source>Second color</source>
-        <translation>Barva sekundové ručičky</translation>
+        <translation>Sekunden Farbe</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="958"/>
         <source>Language</source>
-        <translation>Jazyk</translation>
+        <translation>Sprache</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="978"/>
         <source>English</source>
-        <translation>Angličtina</translation>
+        <translation type="unfinished">English</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="983"/>
         <source>Czech</source>
-        <translation>Čeština</translation>
+        <translation>Tzechisch</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="988"/>
         <source>German</source>
-        <translation>Němčina</translation>
+        <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="1011"/>
         <source>Syslem clock setting</source>
-        <translation>Systémové hodiny</translation>
+        <translation>System Uhr</translation>
     </message>
     <message>
         <location filename="settingwindow.ui" line="1030"/>
         <source>Open</source>
-        <translation>Otevřít</translation>
+        <translation>Eroefnen</translation>
     </message>
     <message>
         <location filename="settingwindow.cpp" line="30"/>
         <source>ITU clock</source>
-        <translation>ITU hodiny</translation>
+        <translation>ITU Uhr</translation>
     </message>
 </context>
 </TS>

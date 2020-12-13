@@ -2,33 +2,26 @@
 #include "settingwindow.h"
 #include "settingmodel.h"
 #include "generalmodel.h"
+#include "translator.h"
+#include "main.h"
 
 #include <QDebug>
 #include <QApplication>
 #include <QTranslator>
 
+Translator *translator;
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    QTranslator t;
+    translator = new Translator(&a);
 
-    QLocale loc = QLocale();
+    ClockWindow w;
+    w.show();
 
-    if(loc.language() == QLocale::Czech)
-        t.load(":/ITU_clock_cs_CZ");
-
-    else if(loc.language() == QLocale::German)
-        t.load(":/ITU_clock_de_DE");
-
-    if(loc.language() != QLocale::English)
-        a.installTranslator(&t);
-
-//    ClockWindow w;
-//    w.show();
-
-    SettingWindow s;
-    s.show();
+//    SettingWindow s;
+//    s.show();
 
     return a.exec();
 }

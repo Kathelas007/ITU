@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>ITU_clock_cs_CZ.qm</file>
+        <file>ITU_clock_de_DE.qm</file>
     </qresource>
 </RCC>

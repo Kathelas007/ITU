@@ -33,6 +33,7 @@ void GeneralModel::loadSetting(){
     own = settings.value("own").toBool();
     dial_color = settings.value("dial_color").value<QColor>();
     b_color = settings.value("b_color").value<QColor>();
+    language = settings.value("language").toInt();
     settings.endGroup();
 }
 
@@ -48,5 +49,6 @@ void GeneralModel::saveSetting(){
     settings.setValue("own", own);
     settings.setValue("dial_color", dial_color);
     settings.setValue("b_color", b_color);
+    settings.setValue("language", language);
     settings.endGroup();
 }

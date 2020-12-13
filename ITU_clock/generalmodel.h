@@ -34,6 +34,8 @@ public:
     QColor dial_color;
     QColor b_color;
 
+    int language;
+
 };
 
 #endif // GENERALMODEL_H
