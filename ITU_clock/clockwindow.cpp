@@ -185,7 +185,6 @@ void ClockWindow::hideShowClock(){
 }
 
 void ClockWindow::showSettings(){
-    //uprav tak, aby se nedala vyklikat hromada oken
     SettingWindow *settings = new SettingWindow();
     settings->show();
 }
