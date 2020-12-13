@@ -74,7 +74,7 @@ void AnalogClock::selectClockFaceType(){
 
 
     //select clock face type
-    if (analogMod->dial_mode == 0 && analogMod->dial_description != 2){
+    if (analogMod->dial_mode == 0 && analogMod->dial_description != 3){
 
         if(analogMod->dial_description == 0){
             this->faceImage = new QImage(":/assets/clock_face_full_numbers.png");
@@ -83,9 +83,13 @@ void AnalogClock::selectClockFaceType(){
         else if (analogMod->dial_description == 1){
             this->faceImage = new QImage(":/assets/clock_face_partial_markings.png");
         }
+
+        else {
+            this->faceImage = new QImage(":/assets/clock_face_full_roman.png");
+        }
     }
 
-    else if (analogMod->dial_mode ==1 && analogMod->dial_description != 2){
+    else if (analogMod->dial_mode ==1 && analogMod->dial_description != 3){
         this->faceImage = new QImage(":/assets/clock_face_full_markings.png");
     }
 
