@@ -15,6 +15,7 @@ class DigitalClock : public QLCDNumber
 public:
     explicit DigitalClock(QWidget *parent = nullptr);
 
+    static QString  getTimeFormat();
 
 public slots:
     void displayClock();

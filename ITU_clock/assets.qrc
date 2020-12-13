@@ -20,5 +20,9 @@
         <file>assets/hour_needle.png</file>
         <file>assets/minute_needle.png</file>
         <file>assets/second_needle.png</file>
+        <file>assets/window-close-symbolic.png</file>
+        <file>assets/window-maximize-symbolic.png</file>
+        <file>assets/window-minimize-symbolic.png</file>
+        <file>assets/playlist-automatic-symbolic.png</file>
     </qresource>
 </RCC>
