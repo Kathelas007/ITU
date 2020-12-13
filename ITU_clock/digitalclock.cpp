@@ -17,6 +17,26 @@ DigitalClock::DigitalClock(QWidget *parent) : QLCDNumber(parent)
     displayClock();
 }
 
+QString DigitalClock::getTimeFormat(){
+
+    GeneralModel* model = GeneralModel::getInstance();
+    DigitalModel* digitalMod = DigitalModel::getInstance();
+
+    QString format = "";
+    if(model->hours == true)
+        format += "hh";
+    if(model->minutes == true)
+        format += digitalMod->deliminer + "mm";
+    if(model->seconds == true)
+        format += digitalMod->deliminer + "ss";
+
+    if(digitalMod->format == 0){
+        format += " ap";
+    }
+
+    return format;
+}
+
 /********************SLOTS*********************/
 
 void DigitalClock::displayClock(){

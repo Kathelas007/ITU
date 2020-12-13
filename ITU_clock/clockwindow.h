@@ -6,6 +6,8 @@
 #include <QToolButton>
 #include <QGridLayout>
 #include <QHBoxLayout>
+#include <QLabel>
+#include <QTime>
 
 #include "digitalclock.h"
 #include "analogclock.h"
@@ -26,6 +28,7 @@ public slots:
 private slots:
     void hideShowClock();
     void showSettings();
+    void updateTimeLabel();
 
 private:
     DigitalClock* digital = nullptr;
@@ -33,12 +36,14 @@ private:
 
     QGridLayout* windowLayout;
 
+    QSpacerItem* horizontalSpace;
+    QLabel*      collapsedTimeLabel;
     QToolButton* closeButton;
     QToolButton* minimButton;
     QToolButton* settingsButton;
 
     bool collapsed = false;
-
+    int spaceWidth = 130;
     int baseW      = 200;
     int baseH      = 200;
 
@@ -48,9 +53,12 @@ private:
     int mouseCoordX;
     int mouseCoordY;
 
+    QSize baseIconSize = QSize(20,20);
+
     QGridLayout* setup_layout(QWidget* widget);
     void set_close_minim_buttons(QGridLayout* layout);
 
+    QLabel*      setup_collapsed_label(QHBoxLayout* layout);
     QToolButton* display_close_button(QHBoxLayout* layout);
     QToolButton* display_minimize_button(QHBoxLayout* layout);
     QToolButton* display_settings_button(QGridLayout* layout);
