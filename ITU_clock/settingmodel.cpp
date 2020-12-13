@@ -14,15 +14,14 @@ void SettingModel::defaultSetting(){
     QSettings settings(QSettings::NativeFormat, QSettings::UserScope, company, product);
     settings.beginGroup("General");
     settings.setValue("mode", 0);
-    settings.setValue("opacity", 125);
+    settings.setValue("opacity", 206);
     settings.setValue("hours", true);
     settings.setValue("minutes", true);
-    settings.setValue("seconds",false);
-    settings.setValue("design",0);
-    settings.setValue("own", false);
-    settings.setValue("dial_color", QColor(Qt::red));
-    settings.setValue("b_color", QColor(Qt::white));
-    settings.setValue("b_color", -1);
+    settings.setValue("seconds",true);
+    settings.setValue("design",true);
+    settings.setValue("dial_color", QColor("#2c001e"));
+    settings.setValue("b_color", QColor("#772953"));
+    settings.setValue("language", -1);
     settings.endGroup();
 
     settings.beginGroup("Digital");
@@ -31,11 +30,11 @@ void SettingModel::defaultSetting(){
     settings.endGroup();
 
     settings.beginGroup("Analog");
-    settings.setValue("dial_mode", 0);
+    settings.setValue("dial_mode", 1);
     settings.setValue("dial_description", 1);
-    settings.setValue("h_color", QColor(Qt::black));
-    settings.setValue("m_color", QColor(Qt::black));
-    settings.setValue("s_color", QColor(Qt::black));
+    settings.setValue("h_color", QColor("#000000"));
+    settings.setValue("m_color", QColor("#000000"));
+    settings.setValue("s_color", QColor("e95420"));
     settings.endGroup();
 }
 

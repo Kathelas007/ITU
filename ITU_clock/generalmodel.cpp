@@ -29,8 +29,7 @@ void GeneralModel::loadSetting(){
     hours = settings.value("hours").toBool();
     minutes = settings.value("minutes").toBool();
     seconds = settings.value("seconds").toBool();
-    design = settings.value("design").toInt();
-    own = settings.value("own").toBool();
+    design = settings.value("design").toBool();
     dial_color = settings.value("dial_color").value<QColor>();
     b_color = settings.value("b_color").value<QColor>();
     language = settings.value("language").toInt();
@@ -46,7 +45,6 @@ void GeneralModel::saveSetting(){
     settings.setValue("minutes", minutes);
     settings.setValue("seconds", seconds);
     settings.setValue("design", design);
-    settings.setValue("own", own);
     settings.setValue("dial_color", dial_color);
     settings.setValue("b_color", b_color);
     settings.setValue("language", language);

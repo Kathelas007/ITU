@@ -26,9 +26,9 @@ public:
 
     bool hours;
     bool minutes;
-    bool  seconds;
+    bool seconds;
 
-    int design;
+    bool design;
     bool own;
 
     QColor dial_color;

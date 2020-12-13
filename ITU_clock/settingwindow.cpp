@@ -47,13 +47,12 @@ void SettingWindow::setMappers(){
 
 //    General
     comboBoxMapper[ui->mode_cb] = qMakePair(generalModel, &generalModel->mode);
-    comboBoxMapper[ui->design_cb] = qMakePair(generalModel,&generalModel->design);
     sliderMapper[ui->opacity_slider] = qMakePair(generalModel,&generalModel->opacity);
 
     checkBoxMapper[ui->hours_chb] = qMakePair(generalModel,&generalModel->hours);
     checkBoxMapper[ui->minutes_chb] = qMakePair(generalModel,&generalModel->minutes);
     checkBoxMapper[ui->seconds_chb] = qMakePair(generalModel,&generalModel->seconds);
-    checkBoxMapper[ui->own_chb] = qMakePair(generalModel,&generalModel->own);
+    checkBoxMapper[ui->default_design_chb] = qMakePair(generalModel,&generalModel->design);
 
     colorPushButtonMapper[ui->h_color_b] = qMakePair(analogModel,&analogModel->h_color);
     colorPushButtonMapper[ui->m_color_b] = qMakePair(analogModel,&analogModel->m_color);
@@ -127,16 +126,33 @@ void SettingWindow::sliderChanged(int value){
 void SettingWindow::designDisabling(int arg1){
     bool disable;
     if(arg1 == 0)
-        disable = true;
-    else
         disable = false;
+    else
+        disable = true;
 
     ui->b_color_b->setDisabled(disable);
     ui->h_color_b->setDisabled(disable);
     ui->m_color_b->setDisabled(disable);
     ui->s_color_b->setDisabled(disable);
+    ui->dial_color_p->setDisabled(disable);
 
-    ui->design_cb->setDisabled(!disable);
+    // owndesign
+    if(arg1 == 0){
+        generalModel->b_color =QColor(ui->b_color_b->text());
+         analogModel->h_color = QColor(ui->h_color_b->text());
+         analogModel->m_color = QColor(ui->m_color_b->text());
+         analogModel->s_color = QColor(ui->s_color_b->text());
+        generalModel->dial_color = QColor(ui->dial_color_p->text());
+    } // default design
+    else{
+        generalModel->b_color.setNamedColor("#772953");
+        generalModel->dial_color.setNamedColor("#2c001e");
+        analogModel->h_color.setNamedColor("#000000") ;
+        analogModel->m_color.setNamedColor("#000000") ;
+        analogModel->s_color.setNamedColor("#e95420") ;
+
+    }
+
 }
 
 
@@ -176,7 +192,7 @@ void SettingWindow::loadSetting(){
         connect(le.key(), SIGNAL(textChanged(QString)), this, SLOT(lineEditChanged(QString))); // maybe edited
     }
 
-    designDisabling(ui->own_chb->isChecked());
+    designDisabling(ui->default_design_chb->isChecked());
 
     setLanguage();
 }
@@ -212,10 +228,7 @@ void SettingWindow::changePage(bool active){
     ui->stackedWidget->setCurrentWidget(button_to_pages[button]);
 }
 
-void SettingWindow::on_own_chb_stateChanged(int arg1)
-{
-    designDisabling(arg1);
-}
+
 
 void SettingWindow::on_language_cb_2_currentIndexChanged(int index)
 {
@@ -223,4 +236,9 @@ void SettingWindow::on_language_cb_2_currentIndexChanged(int index)
     generalModel->saveSetting();
 
     emit languageChanged();
+}
+
+void SettingWindow::on_default_design_chb_stateChanged(int arg1)
+{
+    designDisabling(arg1);
 }

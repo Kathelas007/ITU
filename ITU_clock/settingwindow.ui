@@ -227,7 +227,7 @@ QPushButton:checked{
        <enum>QFrame::Raised</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -390,7 +390,7 @@ QPushButton:checked{
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_9">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_10">
                 <item>
@@ -401,26 +401,32 @@ QPushButton:checked{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="design_cb">
-                  <property name="maximumSize">
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
                    <size>
-                    <width>120</width>
-                    <height>16777215</height>
+                    <width>40</width>
+                    <height>20</height>
                    </size>
                   </property>
-                  <item>
-                   <property name="text">
-                    <string>Ubuntu</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>Light</string>
-                   </property>
-                  </item>
-                 </widget>
+                 </spacer>
                 </item>
                </layout>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="default_design_chb">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Turn On</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -437,36 +443,6 @@ QPushButton:checked{
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_2">
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
-                <item>
-                 <widget class="QLabel" name="label_4">
-                  <property name="text">
-                   <string>Own design</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QCheckBox" name="own_chb">
-                  <property name="minimumSize">
-                   <size>
-                    <width>100</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>100</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_4">
                 <item>
