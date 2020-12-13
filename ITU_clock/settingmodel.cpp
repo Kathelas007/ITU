@@ -30,7 +30,7 @@ void SettingModel::defaultSetting(){
     settings.endGroup();
 
     settings.beginGroup("Analog");
-    settings.setValue("dial_mode", 1);
+    settings.setValue("dial_mode", 0);
     settings.setValue("dial_description", 1);
     settings.setValue("h_color", QColor("#000000"));
     settings.setValue("m_color", QColor("#000000"));
