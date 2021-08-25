@@ -18,4 +18,7 @@ Built Dependencies:
 Resolution:
 - 1920x1080px
 - 1366x768px
-	
+
+![Alt text](img/1.png?raw=true)
+![Alt text](img/2.png?raw=true)
+![Alt text](img/3.png?raw=true)
